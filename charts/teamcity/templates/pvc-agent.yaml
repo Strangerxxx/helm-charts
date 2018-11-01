@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ default (include "teamcity.fullname" .) }}-server-data
+  annotations:
+    volume.beta.kubernetes.io/storage-class: {{ .Values.storageClass }}
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 30Gi
