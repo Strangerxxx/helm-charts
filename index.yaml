@@ -1,3 +1,13 @@
 apiVersion: v1
-entries: {}
-generated: 2018-12-16T03:20:46.127737308+03:00
+entries:
+  teamcity:
+  - apiVersion: v1
+    appVersion: 0.0.1
+    created: 2018-12-16T03:28:19.268209269+03:00
+    description: A Helm chart for Kubernetes
+    digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
+    name: teamcity
+    urls:
+    - https://strangerxxx.github.io/helm-charts/teamcity-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-12-16T03:28:19.267748769+03:00
