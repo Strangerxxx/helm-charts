@@ -1,13 +1,38 @@
 apiVersion: v1
 entries:
+  harbor:
+  - appVersion: dev
+    created: 2018-12-16T16:14:44.309780699+03:00
+    description: An open source trusted cloud native registry that stores, signs,
+      and scans content
+    digest: 6426f38487a9052cb1be27c80cb7ffc5ccdad4de0da8caa4e607d6116b68ae31
+    engine: gotpl
+    home: https://goharbor.io
+    icon: https://raw.githubusercontent.com/goharbor/harbor/master/docs/img/harbor_logo.png
+    keywords:
+    - docker
+    - registry
+    - harbor
+    maintainers:
+    - email: huh@vmware.com
+      name: Jesse Hu
+    - email: username.taken@gmail.com
+      name: paulczar
+    name: harbor
+    sources:
+    - https://github.com/goharbor/harbor
+    - https://github.com/goharbor/harbor-helm
+    urls:
+    - harbor-dev.tgz
+    version: dev
   teamcity:
   - apiVersion: v1
     appVersion: 0.0.1
-    created: 2018-12-16T03:57:45.868763949+03:00
+    created: 2018-12-16T16:14:44.310017659+03:00
     description: A Helm chart for Kubernetes
     digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
     name: teamcity
     urls:
     - teamcity-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-16T03:57:45.868021517+03:00
+generated: 2018-12-16T16:14:44.30838603+03:00
