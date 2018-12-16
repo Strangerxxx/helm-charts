@@ -1,0 +1,3 @@
+[submodule "charts/harbor"]
+	path = charts/harbor
+	url = https://github.com/goharbor/harbor-helm.git
