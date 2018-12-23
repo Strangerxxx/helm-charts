@@ -34,8 +34,8 @@ spec:
             - name: http
               containerPort: 8111
               protocol: TCP
-        {{- with .Values.environment }}
-          environment:
+        {{- with .Values.env }}
+          env:
 {{ toYaml . | indent 12 }}
         {{- end }}
           resources:

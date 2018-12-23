@@ -7,7 +7,7 @@ agent:
     repository: jetbrains/teamcity-agent
     tag: latest
     pullPolicy: Always
-  environment: []
+  env: []
   resources:
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
@@ -40,7 +40,7 @@ ingress:
   hosts:
     - tc.default.com
 
-environment:
+env:
   - name: TEAMCITY_SERVER_MEM_OPTS
     value: "-Xmx968m -XX:MaxPermSize=270m -XX:ReservedCodeCacheSize=350m"
 
