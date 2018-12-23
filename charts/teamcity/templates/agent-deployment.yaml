@@ -20,28 +20,52 @@ spec:
         release: {{ .Release.Name }}
     spec:
       volumes:
-          - name: agent-data
+          - name: agent-conf
             persistentVolumeClaim:
               claimName: {{ default (include "teamcity.fullname" .) }}-agent-data
           - name: docker-sock
             hostPath:
               path: /var/run/docker.sock
+          - name: buildagent-work
+            hostPath:
+              path: /opt/buildagent/work
+          - name: buildagent-temp
+            hostPath:
+              path: /opt/buildagent/temp
+          - name: buildagent-tools
+            hostPath:
+              path: /opt/buildagent/tools
+          - name: buildagent-plugins
+            hostPath:
+              path: /opt/buildagent/plugins
+          - name: buildagent-system
+            hostPath:
+              path: /opt/buildagent/system
       containers:
         - name: {{ .Chart.Name }}-agent
           image: "{{ .Values.agent.image.repository }}:{{ .Values.agent.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name:  agent-conf
+              mountPath: /data/teamcity_agent/conf
+            - name: docker-sock
+              mountPath: /var/run/docker.sock
+            - name: buildagent-work
+              mountPath: /opt/buildagent/work
+            - name: buildagent-temp
+              mountPath: /opt/buildagent/temp
+            - name: buildagent-tools
+              mountPath: /opt/buildagent/tools
+            - name: buildagent-plugins
+              mountPath: /opt/buildagent/plugins
+            - name: buildagent-system
+              mountPath: /opt/buildagent/system
           env:
             - name: SERVER_URL
               value: "http://{{ template "teamcity.fullname" . }}:8111"
-          volumeMounts:
-            - name:  agent-data
-              mountPath: /data/teamcity_agent/conf
-            - name: docker-sock
-              mountPath: "/var/run/docker.sock"
-        {{- with .Values.agent.env }}
-          env:
+          {{- with .Values.agent.env }}
 {{ toYaml . | indent 12 }}
-        {{- end }}
+          {{- end }}
           resources:
 {{ toYaml .Values.agent.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
