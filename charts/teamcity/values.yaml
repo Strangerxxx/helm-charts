@@ -22,6 +22,7 @@ agent:
   
 replicaCount: 1
 storageClass: "nfs-client"
+artifactStorage: 50Gi
 
 image:
   repository: jetbrains/teamcity-server

@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ default (include "teamcity.fullname" .) }}-server-data
+  name: {{ default (include "teamcity.fullname" .) }}-artifacts
   annotations:
     volume.beta.kubernetes.io/storage-class: {{ .Values.storageClass }}
 spec:
@@ -9,4 +9,4 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 30Gi
+      storage: {{ .Values.artifactStorage }}

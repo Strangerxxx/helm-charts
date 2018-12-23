@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ default (include "teamcity.fullname" .) }}-server-data
+  name: {{ default (include "teamcity.fullname" .) }}-agent-data
   annotations:
     volume.beta.kubernetes.io/storage-class: {{ .Values.storageClass }}
 spec:
