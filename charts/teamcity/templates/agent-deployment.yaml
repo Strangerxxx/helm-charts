@@ -38,6 +38,10 @@ spec:
               mountPath: /data/teamcity_agent/conf
             - name: docker-sock
               mountPath: "/var/run/docker.sock"
+        {{- with .Values.agent.environment }}
+          environment:
+{{ toYaml . | indent 12 }}
+        {{- end }}
           resources:
 {{ toYaml .Values.agent.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
