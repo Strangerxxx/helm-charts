@@ -20,12 +20,9 @@ spec:
         release: {{ .Release.Name }}
     spec:
       volumes:
-          - name: server-data
-            persistentVolumeClaim:
-              claimName: {{ default (include "teamcity.fullname" .) }}-server-data
-          - name: artifacts
-            persistentVolumeClaim:
-              claimName: {{ default (include "teamcity.fullname" .) }}-artifacts
+        - name: server-data
+          persistentVolumeClaim:
+            claimName: {{ default (include "teamcity.fullname" .) }}-server-data
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -33,8 +30,6 @@ spec:
           volumeMounts:
             - name:  server-data
               mountPath: /data/teamcity_server/datadir
-            - name: artifacts
-              mountPath: /data/teamcity_server/datadir/system/artifacts
           ports:
             - name: http
               containerPort: 8111
