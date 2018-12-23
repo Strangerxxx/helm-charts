@@ -24,7 +24,7 @@ spec:
             persistentVolumeClaim:
               claimName: {{ default (include "teamcity.fullname" .) }}-server-data
           - name: artifacts
-          - persistentVolumeClaim:
+            persistentVolumeClaim:
               claimName: {{ default (include "teamcity.fullname" .) }}-artifacts
       containers:
         - name: {{ .Chart.Name }}
