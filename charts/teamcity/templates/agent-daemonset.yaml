@@ -19,30 +19,27 @@ spec:
         release: {{ .Release.Name }}
     spec:
       volumes:
-        - name: agent-conf
-          persistentVolumeClaim:
-            claimName: {{ default (include "teamcity.fullname" .) }}-agent-data
-        - name: docker-sock
-          hostPath:
-            path: /var/run/docker.sock
-        - name: buildagent-work
-          hostPath:
-            path: /opt/buildagent/work
-        - name: buildagent-temp
-          hostPath:
-            path: /opt/buildagent/temp
-        - name: buildagent-tools
-          hostPath:
-            path: /opt/buildagent/tools
-        - name: buildagent-plugins
-          hostPath:
-            path: /opt/buildagent/plugins
-        - name: buildagent-system
-          hostPath:
-            path: /opt/buildagent/system
-        - name: artifacts
-          persistentVolumeClaim:
-            claimName: {{ default (include "teamcity.fullname" .) }}-artifacts
+          - name: agent-conf
+            persistentVolumeClaim:
+              claimName: {{ default (include "teamcity.fullname" .) }}-agent-data
+          - name: docker-sock
+            hostPath:
+              path: /var/run/docker.sock
+          - name: buildagent-work
+            hostPath:
+              path: /opt/buildagent/work
+          - name: buildagent-temp
+            hostPath:
+              path: /opt/buildagent/temp
+          - name: buildagent-tools
+            hostPath:
+              path: /opt/buildagent/tools
+          - name: buildagent-plugins
+            hostPath:
+              path: /opt/buildagent/plugins
+          - name: buildagent-system
+            hostPath:
+              path: /opt/buildagent/system
       containers:
         - name: {{ .Chart.Name }}-agent
           image: "{{ .Values.agent.image.repository }}:{{ .Values.agent.image.tag }}"
@@ -62,8 +59,6 @@ spec:
               mountPath: /opt/buildagent/plugins
             - name: buildagent-system
               mountPath: /opt/buildagent/system
-            - name: artifacts
-              mountPath: /artifacts
           env:
             - name: SERVER_URL
               value: "http://{{ template "teamcity.fullname" . }}:8111"
