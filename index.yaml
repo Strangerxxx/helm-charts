@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   harbor:
   - appVersion: 1.6.0
-    created: 2018-12-18T15:34:04.280162272+03:00
+    created: 2018-12-23T08:47:45.997850459+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 9269ebefcf04823f3bef9e7b2e4ce21b5243e5642a5a6594c760d43584f9a7df
@@ -26,7 +26,7 @@ entries:
     - harbor-0.3.2.tgz
     version: 0.3.2
   - appVersion: 1.6.0
-    created: 2018-12-18T15:34:04.278513712+03:00
+    created: 2018-12-23T08:47:45.996225701+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 3c3017fc61669310d1cab46754933dfd374e5e1050ac7e08b48a7802b967f159
@@ -50,7 +50,7 @@ entries:
     - harbor-0.3.1.tgz
     version: 0.3.1
   - appVersion: 1.6.0
-    created: 2018-12-18T15:34:04.276929383+03:00
+    created: 2018-12-23T08:47:45.994687119+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 6c7ccd7a71996e0c3abda0ee74f0c36cc04c35605c24de8d2c3123f5a386909f
@@ -75,12 +75,21 @@ entries:
     version: 0.3.0
   teamcity:
   - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-12-23T08:47:45.998361102+03:00
+    description: A Helm chart for Kubernetes
+    digest: a42a100d24db001ab77c9b1aa853fd89f2da3e3638c55c0a9a70bfa90f83e01e
+    name: teamcity
+    urls:
+    - teamcity-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
     appVersion: 0.0.1
-    created: 2018-12-18T15:34:04.280409666+03:00
+    created: 2018-12-23T08:47:45.998110977+03:00
     description: A Helm chart for Kubernetes
     digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
     name: teamcity
     urls:
     - teamcity-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-18T15:34:04.275206604+03:00
+generated: 2018-12-23T08:47:45.992958589+03:00
