@@ -3,7 +3,7 @@ entries:
   elasticsearch-operator:
   - apiVersion: v1
     appVersion: master
-    created: 2018-12-25T03:16:57.22712006+03:00
+    created: 2019-01-09T05:01:17.698466155+03:00
     description: A Helm chart for Elasticsearch operator
     digest: d41f7278bbb48fcc0010810cb4ef2f334a2460042f277ff9ff77c5e2008320d4
     maintainers:
@@ -20,7 +20,7 @@ entries:
     version: 0.2.0
   harbor:
   - appVersion: 1.6.0
-    created: 2018-12-25T03:16:57.231644877+03:00
+    created: 2019-01-09T05:01:17.703082434+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 9269ebefcf04823f3bef9e7b2e4ce21b5243e5642a5a6594c760d43584f9a7df
@@ -44,7 +44,7 @@ entries:
     - harbor-0.3.2.tgz
     version: 0.3.2
   - appVersion: 1.6.0
-    created: 2018-12-25T03:16:57.230092811+03:00
+    created: 2019-01-09T05:01:17.701462568+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 3c3017fc61669310d1cab46754933dfd374e5e1050ac7e08b48a7802b967f159
@@ -68,7 +68,7 @@ entries:
     - harbor-0.3.1.tgz
     version: 0.3.1
   - appVersion: 1.6.0
-    created: 2018-12-25T03:16:57.22860828+03:00
+    created: 2019-01-09T05:01:17.699983439+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 6c7ccd7a71996e0c3abda0ee74f0c36cc04c35605c24de8d2c3123f5a386909f
@@ -91,10 +91,20 @@ entries:
     urls:
     - harbor-0.3.0.tgz
     version: 0.3.0
+  kadira:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-01-09T05:01:17.704146111+03:00
+    description: A Kadira APM Helm chart for Kubernetes
+    digest: 35b14c447ca09664f76182569d9a2d39bae7b53783600439880848352a60214a
+    name: kadira
+    urls:
+    - kadira-0.1.0.tgz
+    version: 0.1.0
   teamcity:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-25T03:16:57.233996805+03:00
+    created: 2019-01-09T05:01:17.705771032+03:00
     description: A Helm chart for Kubernetes
     digest: 3c4dde21253a7bb498dda65063d5953ae6a735264c8ed7809b1889abb725f5c3
     name: teamcity
@@ -103,7 +113,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-25T03:16:57.233767433+03:00
+    created: 2019-01-09T05:01:17.705539629+03:00
     description: A Helm chart for Kubernetes
     digest: 8320874ca75c602a87063f8d397946ef97db01f4eac99ffe4c2fe9067bdf2405
     name: teamcity
@@ -112,7 +122,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-25T03:16:57.233538115+03:00
+    created: 2019-01-09T05:01:17.705310514+03:00
     description: A Helm chart for Kubernetes
     digest: f62c87c7bb9453cd44b01e286f6d65436c6ea5f50971ddcd5b0d2d8e6889110e
     name: teamcity
@@ -121,7 +131,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-25T03:16:57.233243411+03:00
+    created: 2019-01-09T05:01:17.705079008+03:00
     description: A Helm chart for Kubernetes
     digest: c4e16727b16c9e1c57c6bf56e88c48a9d203e19f00df4f7f4ac3f7feee3b53cf
     name: teamcity
@@ -130,7 +140,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-25T03:16:57.232943228+03:00
+    created: 2019-01-09T05:01:17.704856315+03:00
     description: A Helm chart for Kubernetes
     digest: dba696c241dfa923f25cdfabc43c96fc67c54170570d35ad1359f17fea135b4d
     name: teamcity
@@ -139,7 +149,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-25T03:16:57.232396042+03:00
+    created: 2019-01-09T05:01:17.704633158+03:00
     description: A Helm chart for Kubernetes
     digest: a42a100d24db001ab77c9b1aa853fd89f2da3e3638c55c0a9a70bfa90f83e01e
     name: teamcity
@@ -148,11 +158,11 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 0.0.1
-    created: 2018-12-25T03:16:57.231876614+03:00
+    created: 2019-01-09T05:01:17.704379629+03:00
     description: A Helm chart for Kubernetes
     digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
     name: teamcity
     urls:
     - teamcity-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-25T03:16:57.226752185+03:00
+generated: 2019-01-09T05:01:17.698091413+03:00
