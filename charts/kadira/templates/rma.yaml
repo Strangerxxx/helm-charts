@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "kadira.fullname" . }}-rma
+  labels:
+    app.kubernetes.io/name: {{ include "kadira.name" . }}-rma
+    helm.sh/chart: {{ include "kadira.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.rma.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "kadira.name" . }}-rma
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "kadira.name" . }}-rma
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}-rma
+          image: "{{ .Values.rma.image.repository }}:{{ .Values.rma.image.tag }}"
+          imagePullPolicy: {{ .Values.rma.image.pullPolicy }}
+          env:
+            - name: MONGO_SHARD
+              value: "one"
+            - name: MONGO_URL
+              value: "mongodb://{{ include "kadira.fullname" . }}-mongodb:27017/apm"
+          resources:
+            {{- toYaml .Values.rma.resources | nindent 12 }}
+      {{- with .Values.rma.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.rma.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.rma.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

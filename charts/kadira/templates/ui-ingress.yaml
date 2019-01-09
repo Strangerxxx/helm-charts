@@ -1,0 +1,40 @@
+{{- if .Values.ui.ingress.enabled -}}
+{{- $fullName := include "kadira.fullname" . -}}
+{{- $ingressPaths := .Values.ui.ingress.paths -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-ui
+  labels:
+    app.kubernetes.io/name: {{ include "kadira.name" . }}-ui
+    helm.sh/chart: {{ include "kadira.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  {{- with .Values.ui.ingress.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+{{- if .Values.ui.ingress.tls }}
+  tls:
+  {{- range .Values.ui.ingress.tls }}
+    - hosts:
+      {{- range .hosts }}
+        - {{ . | quote }}
+      {{- end }}
+      secretName: {{ .secretName }}
+  {{- end }}
+{{- end }}
+  rules:
+  {{- range .Values.ui.ingress.hosts }}
+    - host: {{ . | quote }}
+      http:
+        paths:
+	{{- range $ingressPaths }}
+          - path: {{ . }}
+            backend:
+              serviceName: {{ $fullName }}-ui
+              servicePort: http
+	{{- end }}
+  {{- end }}
+{{- end }}

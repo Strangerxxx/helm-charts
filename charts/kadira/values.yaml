@@ -1,0 +1,74 @@
+# Default values for kadira.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+engine:
+  image:
+    repository: hub.sharekey.com/infra/kadira-engine
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  replicaCount: 1
+rma:
+  image:
+    repository: hub.sharekey.com/infra/kadira-rma
+    tag: latest
+    pullPolicy: IfNotPresent
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  replicaCount: 1
+api:
+  image:
+    repository: hub.sharekey.com/infra/kadira-api
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  replicaCount: 1
+ui:
+  rootURL: "https://apm.example.com"
+  image:
+    repository: hub.sharekey.com/infra/kadira-ui
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: false
+    paths:
+      - /
+    hosts: []
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    tls: []
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  replicaCount: 1
+mongodb:
+  usePassword: false
+  replication:
+    enabled: true
+nameOverride: ""
+fullnameOverride: ""
+
+
+
+
+
+

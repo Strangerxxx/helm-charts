@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "kadira.fullname" . }}-ui
+  labels:
+    app.kubernetes.io/name: {{ include "kadira.name" . }}-ui
+    helm.sh/chart: {{ include "kadira.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: {{ .Values.ui.service.type }}
+  ports:
+    - port: {{ .Values.ui.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "kadira.name" . }}-ui
+    app.kubernetes.io/instance: {{ .Release.Name }}
