@@ -20,8 +20,8 @@ spec:
     spec:
       volumes:
           - name: agent-conf
-            persistentVolumeClaim:
-              claimName: {{ default (include "teamcity.fullname" .) }}-agent-data
+            hostPath:
+              path: /data/teamcity_agent/conf
           - name: docker-sock
             hostPath:
               path: /var/run/docker.sock
