@@ -30,7 +30,7 @@ spec:
           env:
           {{- with .Values.debug }}
             - name: WEBLATE_DEBUG
-              value: {{ if . }}1{{ else }}0{{- end }}
+              value: "{{ if . }}1{{ else }}0{{- end }}"
           {{- end }}
           {{- with .Values.loglevel }}
             - name: WEBLATE_LOGLEVEL
@@ -66,7 +66,7 @@ spec:
           {{- end }}
           {{- with .Values.registration_open }}
             - name: WEBLATE_REGISTRATION_OPEN
-              value: {{ if . }}1{{ else }}0{{- end }}
+              value: "{{ if . }}1{{ else }}0{{- end }}"
           {{- end }}
           {{- with .Values.time_zone }}
             - name: WEBLATE_TIME_ZONE
@@ -102,7 +102,7 @@ spec:
           {{- end }}
           {{- with .Values.offload_indexing }}
             - name: WEBLATE_OFFLOAD_INDEXING
-              value: {{ if . }}1{{ else }}0{{- end }}
+              value: "{{ if . }}1{{ else }}0{{- end }}"
           {{- end }}
           {{- with .Values.ga_id }}
             - name: WEBLATE_GOOGLE_ANALYTICS_ID
@@ -110,7 +110,7 @@ spec:
           {{- end }}
           {{- with .Values.https }}
             - name: WEBLATE_ENABLE_HTTPS
-              value: {{ if . }}1{{ else }}0{{- end }}
+              value: "{{ if . }}1{{ else }}0{{- end }}"
           {{- end }}
           {{- with .Values.https_proxy_header }}
             - name: WEBLATE_IP_PROXY_HEADER
@@ -118,7 +118,7 @@ spec:
           {{- end }}
           {{- with .Values.require_login }}
             - name: WEBLATE_REQUIRE_LOGIN
-              value: {{ if . }}1{{ else }}0{{- end }}
+              value: "{{ if . }}1{{ else }}0{{- end }}"
           {{- end }}
           {{- with .Values.ldap }}
             - name: WEBLATE_AUTH_LDAP_SERVER_URI
@@ -144,7 +144,7 @@ spec:
                 {{- else }}
                   name: {{ template "postgresql.secret" . }}
                 {{- end }}
-                key: postgres-password
+                  key: postgresql-password
             - name: POSTGRES_USER
               value: {{ default "weblate" .Values.postgresql.postgresUser | quote }}
             - name: POSTGRES_DATABASE
@@ -156,7 +156,7 @@ spec:
             - name: REDIS_HOST
               value: {{ template "redis.fullname" . }}-master
             - name: REDIS_PORT
-              value: 6379
+              value: "6379"
           livenessProbe:
             httpGet:
               path: /
