@@ -62,7 +62,7 @@ spec:
           {{- end }}
           {{- with .Values.allowed_hosts }}
             - name: WEBLATE_ALLOWED_HOSTS
-              value: {{ . }}
+              value: {{ . | quote }}
           {{- end }}
           {{- with .Values.registration_open }}
             - name: WEBLATE_REGISTRATION_OPEN
@@ -157,14 +157,14 @@ spec:
               value: {{ template "redis.fullname" . }}-master
             - name: REDIS_PORT
               value: "6379"
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+#          livenessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+#          readinessProbe:
+#            httpGet:
+#              path: /
+#              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
