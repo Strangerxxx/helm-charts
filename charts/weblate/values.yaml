@@ -1,0 +1,100 @@
+# Default values for weblate.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+debug: true
+loglevel: "DEBUG"
+site_title: "Weblate"
+admin_name: "Weblate Admin"
+admin_email: "weblate@example.com"
+#admin_password:
+server_email: "weblate@example.com"
+default_from_email: "weblate@example.com"
+allowed_hosts: "*"
+registration_open: true
+#time_zone:
+#mt_google_key:
+#sa:
+#  github:
+#    key:
+#    secret:
+#  bitbucket:
+#    key:
+#    secret:
+#  facebook:
+#    key:
+#    secret:
+#  google:
+#    key:
+#    secret:
+#offload_indexing: true
+#ga_id:
+#https: true
+#https_proxy_header: "HTTP_X_FORWARDED_FOR"
+#require_login: true
+#ldap:
+#  server_uri:
+#  user_dn_template:
+#  user_attr_map:
+#email:
+#  host:
+#  user:
+#  password:
+
+
+replicaCount: 1
+
+image:
+  repository: weblate/weblate
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  paths: []
+  hosts:
+    - chart-example.local
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+postgresql:
+  enabled: true
+  postgresqlUsername: weblate
+  postgresqlPassword: weblate
+  postgresqlDatabase: weblate
+redis:
+  usePassword: false
+  cluster:
+    enabled: false
+    slaveCount: 0
