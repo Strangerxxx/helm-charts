@@ -89,6 +89,8 @@ tolerations: []
 
 affinity: {}
 
+storageClass: default
+
 postgresql:
   enabled: true
   postgresqlUsername: weblate

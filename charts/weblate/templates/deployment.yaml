@@ -19,6 +19,10 @@ spec:
         app.kubernetes.io/name: {{ include "weblate.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      volumes:
+        - name: weblate-data
+          persistentVolumeClaim:
+            claimName: {{ default (include "weblate.fullname" .) }}-data
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -27,6 +31,9 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          volumeMounts:
+            - name:  weblate-data
+              mountPath: /app/data
           env:
           {{- with .Values.debug }}
             - name: WEBLATE_DEBUG
