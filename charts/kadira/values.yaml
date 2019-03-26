@@ -4,7 +4,7 @@
 
 engine:
   image:
-    repository: hub.sharekey.com/infra/kadira-engine
+    repository: vladgolubev/kadira-engine
     tag: latest
     pullPolicy: IfNotPresent
   service:
@@ -25,22 +25,9 @@ engine:
   replicaCount: 1
 rma:
   image:
-    repository: hub.sharekey.com/infra/kadira-rma
+    repository: vladgolubev/kadira-rma
     tag: latest
     pullPolicy: IfNotPresent
-  resources: {}
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
-  replicaCount: 1
-api:
-  image:
-    repository: hub.sharekey.com/infra/kadira-api
-    tag: latest
-    pullPolicy: IfNotPresent
-  service:
-    type: ClusterIP
-    port: 80
   resources: {}
   nodeSelector: {}
   tolerations: []
@@ -49,7 +36,7 @@ api:
 ui:
   rootURL: "https://apm.example.com"
   image:
-    repository: hub.sharekey.com/infra/kadira-ui
+    repository: vladgolubev/kadira-ui
     tag: latest
     pullPolicy: IfNotPresent
   service:
