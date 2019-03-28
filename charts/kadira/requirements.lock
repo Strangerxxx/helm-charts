@@ -1,6 +1,6 @@
 dependencies:
-- name: mongodb
+- name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
-  version: 0.4.18
-digest: sha256:87230563dd19ca9ef96a39f7d7b4e81459d8ea5fd93467551ce32653c9df4067
-generated: 2019-01-09T02:46:23.492346804+03:00
+  version: 2.2.1
+digest: sha256:dedf4eb23702fdf0ffaee7a82c2c3593cb148805dc44a6d85cca698684060b60
+generated: 2019-03-28T20:09:12.987582+03:00

@@ -55,10 +55,11 @@ ui:
   tolerations: []
   affinity: {}
   replicaCount: 1
-mongodb:
-  usePassword: false
-  replication:
-    enabled: true
+mongodb-replicaset:
+  replicaSet: kadira
+  configmap:
+    replication:
+      replSetName: kadira
 nameOverride: ""
 fullnameOverride: ""
 
