@@ -27,9 +27,9 @@ spec:
             - name: PORT
               value: "80"
             - name: MONGO_URL
-              value: "mongodb://{{ include "kadira.fullname" . }}-mongodb:27017/apm"
+              value: "mongodb://{{ include "kadira.fullname" . }}-mongodb-replicaset:27017/apm"
             - name: MONGO_SHARD_URL_one
-              value: "mongodb://{{ include "kadira.fullname" . }}-mongodb:27017/apm"
+              value: "mongodb://{{ include "kadira.fullname" . }}-mongodb-replicaset:27017/apm"
             - name: ROOT_URL
               value: "{{ .Values.ui.rootURL }}"
           ports:

@@ -1,4 +1,4 @@
 dependencies:
   - name: mongodb-replicaset
-    version: 2.2.1
-    repository: https://kubernetes-charts.storage.googleapis.com
+    version: 2.2.2
+    repository: file://../mongodb-replicaset
