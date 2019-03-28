@@ -3,7 +3,7 @@ entries:
   elasticsearch-operator:
   - apiVersion: v1
     appVersion: master
-    created: 2019-03-26T11:51:46.024008+03:00
+    created: 2019-03-28T20:11:24.702873+03:00
     description: A Helm chart for Elasticsearch operator
     digest: d41f7278bbb48fcc0010810cb4ef2f334a2460042f277ff9ff77c5e2008320d4
     maintainers:
@@ -20,7 +20,7 @@ entries:
     version: 0.2.0
   harbor:
   - appVersion: 1.6.0
-    created: 2019-03-26T11:51:46.03051+03:00
+    created: 2019-03-28T20:11:24.711478+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 9269ebefcf04823f3bef9e7b2e4ce21b5243e5642a5a6594c760d43584f9a7df
@@ -44,7 +44,7 @@ entries:
     - harbor-0.3.2.tgz
     version: 0.3.2
   - appVersion: 1.6.0
-    created: 2019-03-26T11:51:46.028596+03:00
+    created: 2019-03-28T20:11:24.70945+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 3c3017fc61669310d1cab46754933dfd374e5e1050ac7e08b48a7802b967f159
@@ -68,7 +68,7 @@ entries:
     - harbor-0.3.1.tgz
     version: 0.3.1
   - appVersion: 1.6.0
-    created: 2019-03-26T11:51:46.025987+03:00
+    created: 2019-03-28T20:11:24.706012+03:00
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 6c7ccd7a71996e0c3abda0ee74f0c36cc04c35605c24de8d2c3123f5a386909f
@@ -94,7 +94,16 @@ entries:
   kadira:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.032697+03:00
+    created: 2019-03-28T20:11:24.716422+03:00
+    description: A Kadira APM Helm chart for Kubernetes
+    digest: b481b6c83cc0e528894cf40777ca61ffb4c3a23008a2eba50b25950681a48f93
+    name: kadira
+    urls:
+    - kadira-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-03-28T20:11:24.714738+03:00
     description: A Kadira APM Helm chart for Kubernetes
     digest: a2b7d72df4e89736b90b3e9ba7d75d1d7c0442f610fdafa8a04411bfd02e91a1
     name: kadira
@@ -103,7 +112,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.031948+03:00
+    created: 2019-03-28T20:11:24.713674+03:00
     description: A Kadira APM Helm chart for Kubernetes
     digest: 8bddb9e82af57d3308ea94217429ff4ad089a0039dd141b8c5bf7a37c8bd1165
     name: kadira
@@ -112,7 +121,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.031249+03:00
+    created: 2019-03-28T20:11:24.712523+03:00
     description: A Kadira APM Helm chart for Kubernetes
     digest: 35b14c447ca09664f76182569d9a2d39bae7b53783600439880848352a60214a
     name: kadira
@@ -122,7 +131,7 @@ entries:
   teamcity:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.035772+03:00
+    created: 2019-03-28T20:11:24.722005+03:00
     description: A Helm chart for Kubernetes
     digest: d01aa6b591749ee5a573f2e1fcb3b5602765ff92792463140052abc90192f91a
     name: teamcity
@@ -131,7 +140,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.035361+03:00
+    created: 2019-03-28T20:11:24.72135+03:00
     description: A Helm chart for Kubernetes
     digest: 3c4dde21253a7bb498dda65063d5953ae6a735264c8ed7809b1889abb725f5c3
     name: teamcity
@@ -140,7 +149,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.034983+03:00
+    created: 2019-03-28T20:11:24.720699+03:00
     description: A Helm chart for Kubernetes
     digest: 8320874ca75c602a87063f8d397946ef97db01f4eac99ffe4c2fe9067bdf2405
     name: teamcity
@@ -149,7 +158,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.034592+03:00
+    created: 2019-03-28T20:11:24.719883+03:00
     description: A Helm chart for Kubernetes
     digest: f62c87c7bb9453cd44b01e286f6d65436c6ea5f50971ddcd5b0d2d8e6889110e
     name: teamcity
@@ -158,7 +167,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.034203+03:00
+    created: 2019-03-28T20:11:24.719255+03:00
     description: A Helm chart for Kubernetes
     digest: c4e16727b16c9e1c57c6bf56e88c48a9d203e19f00df4f7f4ac3f7feee3b53cf
     name: teamcity
@@ -167,7 +176,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.033828+03:00
+    created: 2019-03-28T20:11:24.718628+03:00
     description: A Helm chart for Kubernetes
     digest: dba696c241dfa923f25cdfabc43c96fc67c54170570d35ad1359f17fea135b4d
     name: teamcity
@@ -176,7 +185,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.033453+03:00
+    created: 2019-03-28T20:11:24.717817+03:00
     description: A Helm chart for Kubernetes
     digest: a42a100d24db001ab77c9b1aa853fd89f2da3e3638c55c0a9a70bfa90f83e01e
     name: teamcity
@@ -185,7 +194,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 0.0.1
-    created: 2019-03-26T11:51:46.033067+03:00
+    created: 2019-03-28T20:11:24.717013+03:00
     description: A Helm chart for Kubernetes
     digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
     name: teamcity
@@ -195,7 +204,7 @@ entries:
   weblate:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.049299+03:00
+    created: 2019-03-28T20:11:24.736525+03:00
     description: A Helm chart for Kubernetes
     digest: d0ee08ee0cdc88ed4154b9d37a9c6d590fa4b6c995e2cd7e7eadf17885e317c8
     name: weblate
@@ -204,7 +213,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.046222+03:00
+    created: 2019-03-28T20:11:24.733383+03:00
     description: A Helm chart for Kubernetes
     digest: 627458e63b3dc464cc5e38ba575ff96403b32c16766e982db69c8660ad8f5f9d
     name: weblate
@@ -213,7 +222,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.043886+03:00
+    created: 2019-03-28T20:11:24.730455+03:00
     description: A Helm chart for Kubernetes
     digest: 58efe09e3b8015d33c68fe5523ed1f9854e59a2028d72c5031f31bbdd745de21
     name: weblate
@@ -222,7 +231,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.041558+03:00
+    created: 2019-03-28T20:11:24.727781+03:00
     description: A Helm chart for Kubernetes
     digest: 51723b73684f1da1aed3baeed1cae5d4110cb4059cd7e46f2110785e0e1d4429
     name: weblate
@@ -231,11 +240,11 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-26T11:51:46.039257+03:00
+    created: 2019-03-28T20:11:24.7253+03:00
     description: A Helm chart for Kubernetes
     digest: 816de6824d01b4ede4f0c467aa0014eff6d3d77eb5287c44ba519a250c530d6c
     name: weblate
     urls:
     - weblate-0.1.0.tgz
     version: 0.1.0
-generated: 2019-03-26T11:51:46.023278+03:00
+generated: 2019-03-28T20:11:24.700709+03:00
