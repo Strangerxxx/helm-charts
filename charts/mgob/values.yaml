@@ -1,46 +1,69 @@
 # Default values for mgob.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-# Note that two backup plans are provided as templates - they contain dummy values and should be changed before
-# attempting to apply the chart to your cluster.
+
 replicaCount: 1
+
 image:
   repository: stefanprodan/mgob
+  tag: edge
   pullPolicy: IfNotPresent
 
-  # We need edge to be able to use the "configMap.data[name].target.params", required to set the auth db.
-  # When this is official, update to the proper stable release.
-  #
-  # @see https://github.com/stefanprodan/mgob/commit/b70e86b3acba8c82447a568cfcdd31fbd5ee3f7c
-  tag: edge
+nameOverride: ""
+fullnameOverride: ""
+
 service:
-  name: mgob
-  externalPort: 8090
-  internalPort: 8090
-selector:
-  role: mongo-backup
-resources:
-  limits:
-    cpu: 100m
-    memory: 128Mi
-  requests:
-    cpu: 100m
-    memory: 128Mi
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths: []
+
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
 storage:
-  longTerm:
+  storrage:
     accessMode: "ReadWriteOnce"
     storageClass: "gp2" # Note: "gp2" is for AWS. Use the storage class for your cloud provider.
-    name: "mgob-storage"
     size: 10Gi
   tmp:
     accessMode: "ReadWriteOnce"
     storageClass: "gp2" # Note: "gp2" is for AWS. Use the storage class for your cloud provider.
-    name: "mgob-tmp"
-    size: 3Gi
-configMap:
-  name: "mgob-config"
+    size: 2Gi
   data:
-    # Add each plan as per below.
+    accessMode: "ReadWriteOnce"
+    storageClass: "gp2" # Note: "gp2" is for AWS. Use the storage class for your cloud provider.
+    size: 2Gi
+
+configMap:
+  data:
     the-first-database.yml: |
       target:
         host: "mongodb-replicaset"
@@ -103,6 +126,3 @@ secret: {}
 #        "private_key": "-----BEGIN PRIVATE KEY-----\n...........\n-----END PRIVATE KEY-----\n",
 #        ...
 #      }
-env: {}
-#- name: HTTPS_PROXY
-#  value: "http://localhost:3128"
