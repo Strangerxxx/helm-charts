@@ -64,55 +64,55 @@ storage:
 
 configMap:
   data:
-    the-first-database.yml: |
-      target:
-        host: "mongodb-replicaset"
-        port: 27017
-        database: "my-database"
-        username: "mongodb-backup"
-        password: "backup-user-pwd"
-        params: "--authenticationDatabase admin"
-      scheduler:
-        cron: "0 5 * * *"
-        retention: 7
-        timeout: 60
-      s3:
-        url: "https://s3.amazonaws.com"
-        bucket: "my-db-backups"
-        accessKey: "ABCDEFGHIJKLMNOPQRST"
-        secretKey: "be0da49b599b24115c7f53c92c729cbb2c8a17e5"
-        api: "S3v4"
-      slack:
-        url: "https://hooks.slack.com/services/..."
-        channel: mongochan
-        username: mgob
-        # 'true' to notify only on failures
-        warnOnly: false
-
-    the-second-database.yml: |
-      target:
-        host: "mongodb-replicaset"
-        port: 27017
-        database: "my-database"
-        username: "mongodb-backup"
-        password: "backup-user-pwd"
-        params: "--authenticationDatabase admin"
-      scheduler:
-        cron: "0 5 * * *"
-        retention: 7
-        timeout: 60
-      s3:
-        url: "https://s3.amazonaws.com"
-        bucket: "my-db-backups"
-        accessKey: "ABCDEFGHIJKLMNOPQRST"
-        secretKey: "be0da49b599b24115c7f53c92c729cbb2c8a17e5"
-        api: "S3v4"
-      slack:
-        url: "https://hooks.slack.com/services/..."
-        channel: mongochan
-        username: mgob
-        # 'true' to notify only on failures
-        warnOnly: false
+#    the-first-database.yml: |
+#      target:
+#        host: "mongodb-replicaset"
+#        port: 27017
+#        database: "my-database"
+#        username: "mongodb-backup"
+#        password: "backup-user-pwd"
+#        params: "--authenticationDatabase admin"
+#      scheduler:
+#        cron: "0 5 * * *"
+#        retention: 7
+#        timeout: 60
+#      s3:
+#        url: "https://s3.amazonaws.com"
+#        bucket: "my-db-backups"
+#        accessKey: "ABCDEFGHIJKLMNOPQRST"
+#        secretKey: "be0da49b599b24115c7f53c92c729cbb2c8a17e5"
+#        api: "S3v4"
+#      slack:
+#        url: "https://hooks.slack.com/services/..."
+#        channel: mongochan
+#        username: mgob
+#        # 'true' to notify only on failures
+#        warnOnly: false
+#
+#    the-second-database.yml: |
+#      target:
+#        host: "mongodb-replicaset"
+#        port: 27017
+#        database: "my-database"
+#        username: "mongodb-backup"
+#        password: "backup-user-pwd"
+#        params: "--authenticationDatabase admin"
+#      scheduler:
+#        cron: "0 5 * * *"
+#        retention: 7
+#        timeout: 60
+#      s3:
+#        url: "https://s3.amazonaws.com"
+#        bucket: "my-db-backups"
+#        accessKey: "ABCDEFGHIJKLMNOPQRST"
+#        secretKey: "be0da49b599b24115c7f53c92c729cbb2c8a17e5"
+#        api: "S3v4"
+#      slack:
+#        url: "https://hooks.slack.com/services/..."
+#        channel: mongochan
+#        username: mgob
+#        # 'true' to notify only on failures
+#        warnOnly: false
 secret: {}
 ## You can either insert your secret values as part of helm values, or refer externally created secrets.
 #- name: gcp-example-secret-name
