@@ -70,14 +70,14 @@ spec:
       volumes:
         - name: "mgob-config"
           configMap:
-            name: "mgob-config"
+            name: {{ include "mgob.fullname" . }}-config
             items:
           {{- range $name, $value := .Values.configMap.data }}
               - key: {{ $name }}
                 path: {{ $name }}
           {{- end }}
       {{- range $secret := .Values.secret }}
-        - name: {{ $secret.name }}
+        - name: {{ include "mgob.fullname" $ }}-{{ $secret.name }}
           secret:
             secretName: {{ $secret.name }}
       {{- end }}
