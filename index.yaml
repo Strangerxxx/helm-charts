@@ -3,7 +3,7 @@ entries:
   elasticsearch-operator:
   - apiVersion: v1
     appVersion: master
-    created: "2019-05-25T13:59:29.462218+03:00"
+    created: "2019-12-04T05:08:29.929093+03:00"
     description: A Helm chart for Elasticsearch operator
     digest: d41f7278bbb48fcc0010810cb4ef2f334a2460042f277ff9ff77c5e2008320d4
     maintainers:
@@ -19,12 +19,16 @@ entries:
     - elasticsearch-operator-0.2.0.tgz
     version: 0.2.0
   harbor:
-  - appVersion: 1.6.0
-    created: "2019-05-25T13:59:29.469098+03:00"
+  - apiVersion: v1
+    appVersion: 1.6.0
+    created: "2019-12-04T05:08:29.941904+03:00"
+    dependencies:
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 3.2.5
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 9269ebefcf04823f3bef9e7b2e4ce21b5243e5642a5a6594c760d43584f9a7df
-    engine: gotpl
     home: https://goharbor.io
     icon: https://raw.githubusercontent.com/goharbor/harbor/master/docs/img/harbor_logo.png
     keywords:
@@ -43,12 +47,16 @@ entries:
     urls:
     - harbor-0.3.2.tgz
     version: 0.3.2
-  - appVersion: 1.6.0
-    created: "2019-05-25T13:59:29.466981+03:00"
+  - apiVersion: v1
+    appVersion: 1.6.0
+    created: "2019-12-04T05:08:29.937636+03:00"
+    dependencies:
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 3.2.5
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 3c3017fc61669310d1cab46754933dfd374e5e1050ac7e08b48a7802b967f159
-    engine: gotpl
     home: https://goharbor.io
     icon: https://raw.githubusercontent.com/goharbor/harbor/master/docs/img/harbor_logo.png
     keywords:
@@ -67,12 +75,16 @@ entries:
     urls:
     - harbor-0.3.1.tgz
     version: 0.3.1
-  - appVersion: 1.6.0
-    created: "2019-05-25T13:59:29.465093+03:00"
+  - apiVersion: v1
+    appVersion: 1.6.0
+    created: "2019-12-04T05:08:29.934309+03:00"
+    dependencies:
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 3.2.5
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 6c7ccd7a71996e0c3abda0ee74f0c36cc04c35605c24de8d2c3123f5a386909f
-    engine: gotpl
     home: https://goharbor.io
     icon: https://raw.githubusercontent.com/goharbor/harbor/master/docs/img/harbor_logo.png
     keywords:
@@ -94,7 +106,11 @@ entries:
   kadira:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.4738+03:00"
+    created: "2019-12-04T05:08:29.949543+03:00"
+    dependencies:
+    - name: mongodb-replicaset
+      repository: file://../mongodb-replicaset
+      version: 2.2.2
     description: A Kadira APM Helm chart for Kubernetes
     digest: 8ff694d26a709a7d14ed730abdbb30e40cb918d6375df6304c319495cc3b3ce0
     name: kadira
@@ -103,7 +119,11 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.472796+03:00"
+    created: "2019-12-04T05:08:29.948061+03:00"
+    dependencies:
+    - name: mongodb-replicaset
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 2.2.1
     description: A Kadira APM Helm chart for Kubernetes
     digest: b481b6c83cc0e528894cf40777ca61ffb4c3a23008a2eba50b25950681a48f93
     name: kadira
@@ -112,7 +132,11 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.471741+03:00"
+    created: "2019-12-04T05:08:29.946503+03:00"
+    dependencies:
+    - name: mongodb
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.4.18
     description: A Kadira APM Helm chart for Kubernetes
     digest: a2b7d72df4e89736b90b3e9ba7d75d1d7c0442f610fdafa8a04411bfd02e91a1
     name: kadira
@@ -121,7 +145,11 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.470979+03:00"
+    created: "2019-12-04T05:08:29.945368+03:00"
+    dependencies:
+    - name: mongodb
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.4.18
     description: A Kadira APM Helm chart for Kubernetes
     digest: 8bddb9e82af57d3308ea94217429ff4ad089a0039dd141b8c5bf7a37c8bd1165
     name: kadira
@@ -130,7 +158,11 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.469853+03:00"
+    created: "2019-12-04T05:08:29.943003+03:00"
+    dependencies:
+    - name: mongodb
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.4.18
     description: A Kadira APM Helm chart for Kubernetes
     digest: 35b14c447ca09664f76182569d9a2d39bae7b53783600439880848352a60214a
     name: kadira
@@ -140,7 +172,7 @@ entries:
   mgob:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.477722+03:00"
+    created: "2019-12-04T05:08:29.954341+03:00"
     description: A Helm chart for Kubernetes
     digest: cf8fbb0b299c09d1d91337e91e2326ed683f38aafe68b55be4085b4c865b76fc
     name: mgob
@@ -149,7 +181,7 @@ entries:
     version: 1.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.477424+03:00"
+    created: "2019-12-04T05:08:29.95388+03:00"
     description: A Helm chart for Kubernetes
     digest: 63cb62c1b5e1abcc7bf1241ecbaa2d44f9e1ee120705b22b8e6d220aa86b871f
     name: mgob
@@ -158,7 +190,7 @@ entries:
     version: 1.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.47713+03:00"
+    created: "2019-12-04T05:08:29.953411+03:00"
     description: A Helm chart for Kubernetes
     digest: 51b179e96a026854ead5e349edda75fdfab5d544d46a3e8e06c6428413ac3590
     name: mgob
@@ -167,7 +199,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.476831+03:00"
+    created: "2019-12-04T05:08:29.952926+03:00"
     description: A Helm chart for Kubernetes
     digest: 8d1b68dc14fbd6d1426bb0e07aba8a2eb83988c0141bc2f8d537d19e7fd6496f
     name: mgob
@@ -176,7 +208,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.476525+03:00"
+    created: "2019-12-04T05:08:29.951719+03:00"
     description: A Helm chart for Kubernetes
     digest: ba516305a1a17b80e975ee6c98dc3e5aade3589e82c6e952b0bc7ed71dacb36b
     name: mgob
@@ -185,7 +217,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.475857+03:00"
+    created: "2019-12-04T05:08:29.951159+03:00"
     description: A Helm chart for Kubernetes
     digest: 25ff0fc5d844f19ceab1d6359d3965a56d6205b03d007f466ff5c2115e74f01d
     name: mgob
@@ -194,7 +226,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.475564+03:00"
+    created: "2019-12-04T05:08:29.95064+03:00"
     description: A Helm chart for Kubernetes
     digest: 83bd23380b98d5d8cccc8e828ae15e861c66c7509b71a0f8648893b975aba589
     name: mgob
@@ -202,7 +234,7 @@ entries:
     - mgob-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v1
-    created: "2019-05-25T13:59:29.475202+03:00"
+    created: "2019-12-04T05:08:29.950085+03:00"
     description: MongoDB dockerized backup agent. Runs schedule backups with retention,
       S3 & SFTP upload, notifications, instrumentation with Prometheus and more.
     digest: 6193925ca7455f1d637ab5d351f192faa191a968dfb1f8eeeaa29168eb649d19
@@ -213,7 +245,16 @@ entries:
   teamcity:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.479914+03:00"
+    created: "2019-12-04T05:08:29.959105+03:00"
+    description: A Helm chart for Kubernetes
+    digest: a945ed43774bc01c53b0c27a1dd51238093d72c1f2a534d9e50714a674a4cef2
+    name: teamcity
+    urls:
+    - teamcity-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-12-04T05:08:29.958651+03:00"
     description: A Helm chart for Kubernetes
     digest: d01aa6b591749ee5a573f2e1fcb3b5602765ff92792463140052abc90192f91a
     name: teamcity
@@ -222,7 +263,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.479623+03:00"
+    created: "2019-12-04T05:08:29.958174+03:00"
     description: A Helm chart for Kubernetes
     digest: 3c4dde21253a7bb498dda65063d5953ae6a735264c8ed7809b1889abb725f5c3
     name: teamcity
@@ -231,7 +272,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.479348+03:00"
+    created: "2019-12-04T05:08:29.957721+03:00"
     description: A Helm chart for Kubernetes
     digest: 8320874ca75c602a87063f8d397946ef97db01f4eac99ffe4c2fe9067bdf2405
     name: teamcity
@@ -240,7 +281,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.479078+03:00"
+    created: "2019-12-04T05:08:29.957255+03:00"
     description: A Helm chart for Kubernetes
     digest: f62c87c7bb9453cd44b01e286f6d65436c6ea5f50971ddcd5b0d2d8e6889110e
     name: teamcity
@@ -249,7 +290,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.478796+03:00"
+    created: "2019-12-04T05:08:29.956743+03:00"
     description: A Helm chart for Kubernetes
     digest: c4e16727b16c9e1c57c6bf56e88c48a9d203e19f00df4f7f4ac3f7feee3b53cf
     name: teamcity
@@ -258,7 +299,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.478542+03:00"
+    created: "2019-12-04T05:08:29.956231+03:00"
     description: A Helm chart for Kubernetes
     digest: dba696c241dfa923f25cdfabc43c96fc67c54170570d35ad1359f17fea135b4d
     name: teamcity
@@ -267,7 +308,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.478271+03:00"
+    created: "2019-12-04T05:08:29.955204+03:00"
     description: A Helm chart for Kubernetes
     digest: a42a100d24db001ab77c9b1aa853fd89f2da3e3638c55c0a9a70bfa90f83e01e
     name: teamcity
@@ -276,7 +317,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 0.0.1
-    created: "2019-05-25T13:59:29.478012+03:00"
+    created: "2019-12-04T05:08:29.954756+03:00"
     description: A Helm chart for Kubernetes
     digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
     name: teamcity
@@ -286,7 +327,15 @@ entries:
   weblate:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.491592+03:00"
+    created: "2019-12-04T05:08:29.976434+03:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 3.9.4
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 5.4.0
     description: A Helm chart for Kubernetes
     digest: d0ee08ee0cdc88ed4154b9d37a9c6d590fa4b6c995e2cd7e7eadf17885e317c8
     name: weblate
@@ -295,7 +344,15 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.489736+03:00"
+    created: "2019-12-04T05:08:29.973427+03:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 3.9.4
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 5.4.0
     description: A Helm chart for Kubernetes
     digest: 627458e63b3dc464cc5e38ba575ff96403b32c16766e982db69c8660ad8f5f9d
     name: weblate
@@ -304,7 +361,15 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.486555+03:00"
+    created: "2019-12-04T05:08:29.97041+03:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 3.9.4
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 5.4.0
     description: A Helm chart for Kubernetes
     digest: 58efe09e3b8015d33c68fe5523ed1f9854e59a2028d72c5031f31bbdd745de21
     name: weblate
@@ -313,7 +378,15 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.48467+03:00"
+    created: "2019-12-04T05:08:29.966596+03:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 3.9.4
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 5.4.0
     description: A Helm chart for Kubernetes
     digest: 51723b73684f1da1aed3baeed1cae5d4110cb4059cd7e46f2110785e0e1d4429
     name: weblate
@@ -322,11 +395,19 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-05-25T13:59:29.482467+03:00"
+    created: "2019-12-04T05:08:29.96329+03:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 3.9.4
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 5.4.0
     description: A Helm chart for Kubernetes
     digest: 816de6824d01b4ede4f0c467aa0014eff6d3d77eb5287c44ba519a250c530d6c
     name: weblate
     urls:
     - weblate-0.1.0.tgz
     version: 0.1.0
-generated: "2019-05-25T13:59:29.461512+03:00"
+generated: "2019-12-04T05:08:29.927859+03:00"
