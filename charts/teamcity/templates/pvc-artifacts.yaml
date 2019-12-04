@@ -1,8 +1,9 @@
+{{- $fullName := default (include "teamcity.fullname" .) -}}
 {{- with .Values.artifactStorage }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ default (include "teamcity.fullname" $.) }}-artifacts
+  name: {{ $fullName }}-artifacts
   annotations:
     volume.beta.kubernetes.io/storage-class: {{ .storageClass }}
 spec:
