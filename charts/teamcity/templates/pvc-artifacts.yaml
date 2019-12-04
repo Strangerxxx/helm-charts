@@ -1,12 +1,14 @@
+{{- with .Values.artifactStorage }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ default (include "teamcity.fullname" .) }}-artifacts
+  name: {{ default (include "teamcity.fullname" $.) }}-artifacts
   annotations:
-    volume.beta.kubernetes.io/storage-class: {{ .Values.storageClass }}
+    volume.beta.kubernetes.io/storage-class: {{ .storageClass }}
 spec:
   accessModes:
-    - ReadWriteOnce
+    - {{ .accessMode }}
   resources:
     requests:
-      storage: {{ .Values.artifactStorage }}
+      storage: {{ .storageSize }}
+{{- end}}

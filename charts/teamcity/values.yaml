@@ -18,11 +18,14 @@ agent:
     requests:
       cpu: 600m
       memory: 968Mi
-  
-replicaCount: 1
-storageClass: "nfs-client"
-artifactStorage: 50Gi
 
+replicaCount: 1
+storageClass: "yc-storage-hdd"
+storageSize: 30Gi
+artifacts:
+  storageClass: "nfs-client"
+  storageSize: 50Gi
+  accessMode: ReadWriteMany
 image:
   repository: jetbrains/teamcity-server
   tag: latest
