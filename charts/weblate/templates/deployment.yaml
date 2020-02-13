@@ -164,18 +164,18 @@ spec:
               value: {{ template "redis.fullname" . }}-master
             - name: REDIS_PORT
               value: "6379"
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-            initialDelaySeconds: 60
-            periodSeconds: 5
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
-            initialDelaySeconds: 60
-            periodSeconds: 5
+#          livenessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+#            initialDelaySeconds: 60
+#            periodSeconds: 5
+#          readinessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+#            initialDelaySeconds: 60
+#            periodSeconds: 5
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
