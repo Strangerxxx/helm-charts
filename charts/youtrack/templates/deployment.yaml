@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "youtrack.fullname" . }}
+  labels:
+    {{- include "youtrack.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "youtrack.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "youtrack.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: yourtrack-data
+          persistentVolumeClaim:
+            claimName: {{ include "youtrack.fullname" . }}-data
+        - name: yourtrack-conf
+          persistentVolumeClaim:
+            claimName: {{ include "youtrack.fullname" . }}-conf
+        - name: yourtrack-logs
+          persistentVolumeClaim:
+            claimName: {{ include "youtrack.fullname" . }}-logs
+        - name: yourtrack-backups
+          persistentVolumeClaim:
+            claimName: {{ include "youtrack.fullname" . }}-backups
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          volumeMounts:
+            - name:  yourtrack-data
+              mountPath: /opt/youtrack/data
+            - name:  yourtrack-conf
+              mountPath: /opt/youtrack/conf
+            - name:  yourtrack-logs
+              mountPath: /opt/youtrack/logs
+            - name:  yourtrack-backups
+              mountPath: /opt/youtrack/backups
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

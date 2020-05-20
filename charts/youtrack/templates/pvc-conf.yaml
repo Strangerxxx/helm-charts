@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ include "youtrack.fullname" . }}-conf
+  annotations:
+    volume.beta.kubernetes.io/storage-class: {{ .Values.persistence.conf.storageClass }}
+spec:
+  accessModes: {{ .Values.persistence.conf.accessModes }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.conf.storageSize }}
