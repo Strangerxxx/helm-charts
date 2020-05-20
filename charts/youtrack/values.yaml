@@ -10,22 +10,22 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
-persistence:
+d:
   data:
     storageClass: ""
-    accessModes: ReadWriteMany
+    accessModes: []
     storageSize: ""
   logs:
     storageClass: ""
-    accessModes: ReadWriteMany
+    accessModes: []
     storageSize: ""
   conf:
     storageClass: ""
-    accessModes: ReadWriteMany
+    accessModes: []
     storageSize: ""
   backups:
     storageClass: ""
-    accessModes: ReadWriteMany
+    accessModes: []
     storageSize: ""
 
 
