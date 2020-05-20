@@ -56,14 +56,6 @@ spec:
               mountPath: /opt/youtrack/logs
             - name:  yourtrack-backups
               mountPath: /opt/youtrack/backups
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
