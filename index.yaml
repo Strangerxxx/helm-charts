@@ -3,7 +3,7 @@ entries:
   elasticsearch-operator:
   - apiVersion: v1
     appVersion: master
-    created: "2020-05-20T17:48:32.079156+03:00"
+    created: "2020-05-20T18:22:40.465049+03:00"
     description: A Helm chart for Elasticsearch operator
     digest: d41f7278bbb48fcc0010810cb4ef2f334a2460042f277ff9ff77c5e2008320d4
     maintainers:
@@ -21,7 +21,7 @@ entries:
   harbor:
   - apiVersion: v1
     appVersion: 1.6.0
-    created: "2020-05-20T17:48:32.087256+03:00"
+    created: "2020-05-20T18:22:40.474587+03:00"
     dependencies:
     - name: redis
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -49,7 +49,7 @@ entries:
     version: 0.3.2
   - apiVersion: v1
     appVersion: 1.6.0
-    created: "2020-05-20T17:48:32.084606+03:00"
+    created: "2020-05-20T18:22:40.471834+03:00"
     dependencies:
     - name: redis
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -77,7 +77,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: 1.6.0
-    created: "2020-05-20T17:48:32.082152+03:00"
+    created: "2020-05-20T18:22:40.469176+03:00"
     dependencies:
     - name: redis
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -106,7 +106,7 @@ entries:
   kadira:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.093149+03:00"
+    created: "2020-05-20T18:22:40.481978+03:00"
     dependencies:
     - name: mongodb-replicaset
       repository: file://../mongodb-replicaset
@@ -119,7 +119,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.091948+03:00"
+    created: "2020-05-20T18:22:40.48065+03:00"
     dependencies:
     - name: mongodb-replicaset
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -132,7 +132,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.090725+03:00"
+    created: "2020-05-20T18:22:40.478575+03:00"
     dependencies:
     - name: mongodb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -145,7 +145,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.089852+03:00"
+    created: "2020-05-20T18:22:40.477735+03:00"
     dependencies:
     - name: mongodb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -158,7 +158,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.088278+03:00"
+    created: "2020-05-20T18:22:40.476792+03:00"
     dependencies:
     - name: mongodb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -172,7 +172,7 @@ entries:
   mgob:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.098298+03:00"
+    created: "2020-05-20T18:22:40.486489+03:00"
     description: A Helm chart for Kubernetes
     digest: cf8fbb0b299c09d1d91337e91e2326ed683f38aafe68b55be4085b4c865b76fc
     name: mgob
@@ -181,7 +181,7 @@ entries:
     version: 1.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.096687+03:00"
+    created: "2020-05-20T18:22:40.486021+03:00"
     description: A Helm chart for Kubernetes
     digest: 63cb62c1b5e1abcc7bf1241ecbaa2d44f9e1ee120705b22b8e6d220aa86b871f
     name: mgob
@@ -190,7 +190,7 @@ entries:
     version: 1.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.095981+03:00"
+    created: "2020-05-20T18:22:40.485547+03:00"
     description: A Helm chart for Kubernetes
     digest: 51b179e96a026854ead5e349edda75fdfab5d544d46a3e8e06c6428413ac3590
     name: mgob
@@ -199,7 +199,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.095523+03:00"
+    created: "2020-05-20T18:22:40.485075+03:00"
     description: A Helm chart for Kubernetes
     digest: 8d1b68dc14fbd6d1426bb0e07aba8a2eb83988c0141bc2f8d537d19e7fd6496f
     name: mgob
@@ -208,7 +208,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.095058+03:00"
+    created: "2020-05-20T18:22:40.484576+03:00"
     description: A Helm chart for Kubernetes
     digest: ba516305a1a17b80e975ee6c98dc3e5aade3589e82c6e952b0bc7ed71dacb36b
     name: mgob
@@ -217,7 +217,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.094599+03:00"
+    created: "2020-05-20T18:22:40.483524+03:00"
     description: A Helm chart for Kubernetes
     digest: 25ff0fc5d844f19ceab1d6359d3965a56d6205b03d007f466ff5c2115e74f01d
     name: mgob
@@ -226,7 +226,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.094128+03:00"
+    created: "2020-05-20T18:22:40.482988+03:00"
     description: A Helm chart for Kubernetes
     digest: 83bd23380b98d5d8cccc8e828ae15e861c66c7509b71a0f8648893b975aba589
     name: mgob
@@ -234,7 +234,7 @@ entries:
     - mgob-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v1
-    created: "2020-05-20T17:48:32.093634+03:00"
+    created: "2020-05-20T18:22:40.48245+03:00"
     description: MongoDB dockerized backup agent. Runs schedule backups with retention,
       S3 & SFTP upload, notifications, instrumentation with Prometheus and more.
     digest: 6193925ca7455f1d637ab5d351f192faa191a968dfb1f8eeeaa29168eb649d19
@@ -245,7 +245,7 @@ entries:
   teamcity:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.103418+03:00"
+    created: "2020-05-20T18:22:40.492857+03:00"
     description: A Helm chart for Kubernetes
     digest: fc62867ea17c22f32333134beb939377c05dd432dd0bb7241d8c3b7cd0b3e0f2
     name: teamcity
@@ -254,7 +254,7 @@ entries:
     version: 0.5.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.102971+03:00"
+    created: "2020-05-20T18:22:40.492234+03:00"
     description: A Helm chart for Kubernetes
     digest: 606e9c35ee295d24bb19f5b82cbe724fd8826f2996d6b3ea69cbcf52c9aa163a
     name: teamcity
@@ -263,7 +263,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.102536+03:00"
+    created: "2020-05-20T18:22:40.490873+03:00"
     description: A Helm chart for Kubernetes
     digest: a945ed43774bc01c53b0c27a1dd51238093d72c1f2a534d9e50714a674a4cef2
     name: teamcity
@@ -272,7 +272,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.102095+03:00"
+    created: "2020-05-20T18:22:40.490176+03:00"
     description: A Helm chart for Kubernetes
     digest: d01aa6b591749ee5a573f2e1fcb3b5602765ff92792463140052abc90192f91a
     name: teamcity
@@ -281,7 +281,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.101571+03:00"
+    created: "2020-05-20T18:22:40.489706+03:00"
     description: A Helm chart for Kubernetes
     digest: 3c4dde21253a7bb498dda65063d5953ae6a735264c8ed7809b1889abb725f5c3
     name: teamcity
@@ -290,7 +290,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.101036+03:00"
+    created: "2020-05-20T18:22:40.489201+03:00"
     description: A Helm chart for Kubernetes
     digest: 8320874ca75c602a87063f8d397946ef97db01f4eac99ffe4c2fe9067bdf2405
     name: teamcity
@@ -299,7 +299,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.100587+03:00"
+    created: "2020-05-20T18:22:40.488714+03:00"
     description: A Helm chart for Kubernetes
     digest: f62c87c7bb9453cd44b01e286f6d65436c6ea5f50971ddcd5b0d2d8e6889110e
     name: teamcity
@@ -308,7 +308,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.100115+03:00"
+    created: "2020-05-20T18:22:40.48825+03:00"
     description: A Helm chart for Kubernetes
     digest: c4e16727b16c9e1c57c6bf56e88c48a9d203e19f00df4f7f4ac3f7feee3b53cf
     name: teamcity
@@ -317,7 +317,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.099655+03:00"
+    created: "2020-05-20T18:22:40.487807+03:00"
     description: A Helm chart for Kubernetes
     digest: dba696c241dfa923f25cdfabc43c96fc67c54170570d35ad1359f17fea135b4d
     name: teamcity
@@ -326,7 +326,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.099199+03:00"
+    created: "2020-05-20T18:22:40.487371+03:00"
     description: A Helm chart for Kubernetes
     digest: a42a100d24db001ab77c9b1aa853fd89f2da3e3638c55c0a9a70bfa90f83e01e
     name: teamcity
@@ -335,7 +335,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 0.0.1
-    created: "2020-05-20T17:48:32.098761+03:00"
+    created: "2020-05-20T18:22:40.486932+03:00"
     description: A Helm chart for Kubernetes
     digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
     name: teamcity
@@ -345,7 +345,7 @@ entries:
   weblate:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.131772+03:00"
+    created: "2020-05-20T18:22:40.52176+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -362,7 +362,7 @@ entries:
     version: 0.1.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.128235+03:00"
+    created: "2020-05-20T18:22:40.518411+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -379,7 +379,7 @@ entries:
     version: 0.1.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.125537+03:00"
+    created: "2020-05-20T18:22:40.515534+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -396,7 +396,7 @@ entries:
     version: 0.1.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.122321+03:00"
+    created: "2020-05-20T18:22:40.512618+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -413,7 +413,7 @@ entries:
     version: 0.1.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.119439+03:00"
+    created: "2020-05-20T18:22:40.508121+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -430,7 +430,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.116377+03:00"
+    created: "2020-05-20T18:22:40.505216+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -447,7 +447,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.112869+03:00"
+    created: "2020-05-20T18:22:40.502227+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -464,7 +464,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.109866+03:00"
+    created: "2020-05-20T18:22:40.4987+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -481,7 +481,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-20T17:48:32.106769+03:00"
+    created: "2020-05-20T18:22:40.495781+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -499,7 +499,17 @@ entries:
   youtrack:
   - apiVersion: v2
     appVersion: 2020.1.5557
-    created: "2020-05-20T17:48:32.132612+03:00"
+    created: "2020-05-20T18:22:40.523018+03:00"
+    description: A Helm chart for Kubernetes
+    digest: c8376a3e34272dc27f5f1fe9ad337625019dc86c505f8330ead74ff09e8eba2f
+    name: youtrack
+    type: application
+    urls:
+    - youtrack-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2020.1.5557
+    created: "2020-05-20T18:22:40.522637+03:00"
     description: A Helm chart for Kubernetes
     digest: 494b4f7afc90278f2d6fb9f55a361800c0af272f42bae5e2fa799c1c3d0c37db
     name: youtrack
@@ -509,7 +519,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 2020.1.5557
-    created: "2020-05-20T17:48:32.132229+03:00"
+    created: "2020-05-20T18:22:40.522233+03:00"
     description: A Helm chart for Kubernetes
     digest: 9fb6575eb96ea44a0af09912bb278b9a6a36c4787c323012ee942b1884ec888e
     name: youtrack
@@ -517,4 +527,4 @@ entries:
     urls:
     - youtrack-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-20T17:48:32.07862+03:00"
+generated: "2020-05-20T18:22:40.462957+03:00"
