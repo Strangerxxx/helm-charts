@@ -62,6 +62,10 @@ spec:
           env:
             - name: SERVER_URL
               value: "http://{{ template "teamcity.fullname" . }}:8111"
+            - name: AGENT_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
           {{- with .Values.agent.env }}
 {{ toYaml . | indent 12 }}
           {{- end }}
