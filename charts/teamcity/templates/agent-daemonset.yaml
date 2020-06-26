@@ -65,7 +65,7 @@ spec:
             - name: AGENT_NAME
               valueFrom:
                 fieldRef:
-                  fieldPath: metadata.name
+                  fieldPath: {{ .Values.agent.nameFieldRefPath }}
           {{- with .Values.agent.env }}
 {{ toYaml . | indent 12 }}
           {{- end }}
