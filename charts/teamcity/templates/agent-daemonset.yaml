@@ -19,27 +19,27 @@ spec:
         release: {{ .Release.Name }}
     spec:
       volumes:
-          - name: agent-conf
-            hostPath:
-              path: /data/teamcity_agent/conf
-          - name: docker-sock
-            hostPath:
-              path: /var/run/docker.sock
-          - name: buildagent-work
-            hostPath:
-              path: /opt/buildagent/work
-          - name: buildagent-temp
-            hostPath:
-              path: /opt/buildagent/temp
-          - name: buildagent-tools
-            hostPath:
-              path: /opt/buildagent/tools
-          - name: buildagent-plugins
-            hostPath:
-              path: /opt/buildagent/plugins
-          - name: buildagent-system
-            hostPath:
-              path: /opt/buildagent/system
+        - name: agent-conf
+          hostPath:
+            path: /data/teamcity_agent/conf
+        - name: docker-sock
+          hostPath:
+            path: /var/run/docker.sock
+        - name: buildagent-work
+          hostPath:
+            path: /opt/buildagent/work
+        - name: buildagent-temp
+          hostPath:
+            path: /opt/buildagent/temp
+        - name: buildagent-tools
+          hostPath:
+            path: /opt/buildagent/tools
+        - name: buildagent-plugins
+          hostPath:
+            path: /opt/buildagent/plugins
+        - name: buildagent-system
+          hostPath:
+            path: /opt/buildagent/system
       containers:
         - name: {{ .Chart.Name }}-agent
           image: "{{ .Values.agent.image.repository }}:{{ .Values.agent.image.tag }}"
