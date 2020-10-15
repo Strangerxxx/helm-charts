@@ -1,5 +1,5 @@
 {{- $fullName := default (include "teamcity.fullname" .) -}}
-{{- with .Values.artifacts_storage }}
+{{- with .Values.artifactStorage }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
