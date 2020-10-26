@@ -1,0 +1,111 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "alertmanager-bot.fullname" . }}
+  labels:
+    {{- include "alertmanager-bot.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  serviceName: {{ include "alertmanager-bot.fullname" . }}
+  selector:
+    matchLabels:
+      {{- include "alertmanager-bot.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "alertmanager-bot.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "alertmanager-bot.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          args:
+            - --alertmanager.url={{ .Values.alertmanagerUrl }}
+            - --log.level={{ .Values.logLevel | default "info" }}
+            - --store={{ .Values.store.type }}
+          {{- if eq .Values.store.type "bolt" }}
+            - --bolt.path={{ .Values.store.bolt.path }}
+          {{- else if eq .Values.store.type "consul" }}
+            - --consul.url={{ .Values.store.consul.url }}
+          {{- end }}
+            - --template.paths={{ .Values.templatePath }}
+          env:
+            - name: TELEGRAM_ADMIN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "alertmanager-bot.fullname" . }}
+                  key: admin
+            - name: TELEGRAM_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "alertmanager-bot.fullname" . }}
+                  key: token
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /templates
+              name: templates
+            - mountPath: /data
+              name: data
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+        - name: templates
+          configMap:
+            name: {{ include "alertmanager-bot.fullname" . }}
+{{- if not .Values.persistentVolume.enabled }}
+        - name: data
+          emptyDir: {}
+{{- else }}
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+        {{- with .Values.persistentVolume.annotations }}
+        annotations:
+        {{- toYaml . | nindent 10 }}
+      {{- end }}
+      spec:
+        {{- with .Values.persistentVolume.accessModes }}
+        accessModes:
+        {{- toYaml . | nindent 10 }}
+        {{- end }}
+        resources:
+          requests:
+            storage: {{ .Values.persistentVolume.size | quote }}
+        storageClassName: {{ .Values.persistentVolume.storageClass | quote }}
+{{- end }}
