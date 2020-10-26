@@ -90,7 +90,7 @@ persistentVolume:
 
 templatePath: /templates/default.tmpl
 templates:
-  template.tmpl: |
+  default.tmpl: |
     {{- define "telegram.default" }}
       {{- range .Alerts }}
         {{- if eq .Status "firing"}}
