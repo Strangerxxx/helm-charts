@@ -26,11 +26,20 @@ spec:
         - name: artifacts
           persistentVolumeClaim:
             claimName: {{ default (include "teamcity.fullname" .) }}-artifacts
+        - name: logs
+          persistentVolumeClaim:
+            claimName: {{ default (include "teamcity.fullname" .) }}-logs
+        - name: temp
+          emptyDir: {}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
+            - name: logs
+              mountPath: /opt/teamcity/logs
+            - name: temp
+              mountPath: /opt/teamcity/temp
             - name:  server-data
               mountPath: /data/teamcity_server/datadir
             - name: artifacts

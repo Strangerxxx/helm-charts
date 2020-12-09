@@ -27,6 +27,10 @@ artifactStorage:
   storageClass: "nfs-client"
   storageSize: 50Gi
   accessMode: ReadWriteMany
+logsStorage:
+  storageClass: "nfs-client"
+  storageSize: 50Gi
+  accessMode: ReadWriteMany
 image:
   repository: jetbrains/teamcity-server
   tag: latest
