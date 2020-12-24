@@ -19,6 +19,16 @@ agent:
     requests:
       cpu: 600m
       memory: 968Mi
+  podSecurityContext: {}
+#    fsGroup: 2000
+
+  securityContext: {}
+#    capabilities:
+#      drop:
+#        - ALL
+#    readOnlyRootFilesystem: true
+#    runAsNonRoot: true
+#    runAsUser: 1000
 
 replicaCount: 1
 storageClass: "yc-storage-hdd"
@@ -35,6 +45,17 @@ image:
   repository: jetbrains/teamcity-server
   tag: latest
   pullPolicy: IfNotPresent
+
+podSecurityContext: {}
+#  fsGroup: 2000
+
+securityContext: {}
+#  capabilities:
+#    drop:
+#      - ALL
+#  readOnlyRootFilesystem: true
+#  runAsNonRoot: true
+#  runAsUser: 1000
 
 service:
   type: ClusterIP

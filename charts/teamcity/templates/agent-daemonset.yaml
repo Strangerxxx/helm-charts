@@ -40,8 +40,12 @@ spec:
         - name: buildagent-system
           hostPath:
             path: /opt/buildagent/system
+      securityContext:
+        {{- toYaml .Values.agent.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}-agent
+          securityContext:
+            {{- toYaml .Values.agent.securityContext | nindent 12 }}
           image: "{{ .Values.agent.image.repository }}:{{ .Values.agent.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
