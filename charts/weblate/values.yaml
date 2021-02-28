@@ -93,9 +93,12 @@ storageClass: default
 
 postgresql:
   enabled: true
+  service:
+    port: 5432
   postgresqlUsername: weblate
   postgresqlPassword: weblate
   postgresqlDatabase: weblate
+
 redis:
   usePassword: false
   cluster:

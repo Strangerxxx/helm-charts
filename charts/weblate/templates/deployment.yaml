@@ -83,29 +83,31 @@ spec:
             - name: WEBLATE_MT_GOOGLE_KEY
               value: {{ . }}
           {{- end }}
-          {{- with .Values.sa.github }}
+          {{- with .Values.sa }}
+          {{- with .github }}
             - name: WEBLATE_SOCIAL_AUTH_GITHUB_KEY
               value: {{ .key }}
             - name: WEBLATE_SOCIAL_AUTH_GITHUB_SECRET
               value: {{ .secret }}
           {{- end }}
-          {{- with .Values.sa.bitbucket }}
+          {{- with .bitbucket }}
             - name: WEBLATE_SOCIAL_AUTH_BITBUCKET_KEY
               value: {{ .key }}
             - name: WEBLATE_SOCIAL_AUTH_BITBUCKET_SECRET
               value: {{ .secret }}
           {{- end }}
-          {{- with .Values.sa.facebook }}
+          {{- with .facebook }}
             - name: WEBLATE_SOCIAL_AUTH_FACEBOOK_KEY
               value: {{ .key }}
             - name: WEBLATE_SOCIAL_AUTH_FACEBOOK_SECRET
               value: {{ .secret }}
           {{- end }}
-          {{- with .Values.sa.google }}
+          {{- with .google }}
             - name: WEBLATE_SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
               value: {{ .key }}
             - name: WEBLATE_SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
               value: {{ .secret }}
+          {{- end }}
           {{- end }}
           {{- with .Values.offload_indexing }}
             - name: WEBLATE_OFFLOAD_INDEXING
@@ -149,7 +151,7 @@ spec:
                 {{- if .Values.postgresql.existingSecret }}
                   name: {{ .Values.postgresql.existingSecret }}
                 {{- else }}
-                  name: {{ template "postgresql.secret" . }}
+                  name: {{ template "weblate.postgresql.secret" . }}
                 {{- end }}
                   key: postgresql-password
             - name: POSTGRES_USER
@@ -157,13 +159,13 @@ spec:
             - name: POSTGRES_DATABASE
               value: {{ default "weblate" .Values.postgresql.postgresDatabase | quote }}
             - name: POSTGRES_HOST
-              value: {{ template "postgresql.host" . }}
+              value: {{ template "weblate.postgresql.host" . }}
             - name: POSTGRES_PORT
-              value: {{ template "postgresql.port" . }}
+              value: {{ template "weblate.postgresql.port" . }}
             - name: REDIS_HOST
-              value: {{ template "redis.fullname" . }}-master
+              value: {{ template "weblate.redis.fullname" . }}-master
             - name: REDIS_PORT
-              value: "6379"
+              value: {{ template "weblate.redis.port" . }}
           livenessProbe:
             httpGet:
               path: /
