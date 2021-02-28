@@ -159,9 +159,9 @@ spec:
                 {{- end }}
                   key: postgresql-password
             - name: POSTGRES_USER
-              value: {{ default "weblate" .Values.postgresql.postgresUser | quote }}
+              value: {{ default "weblate" .Values.postgresql.postgresqlUsername | quote }}
             - name: POSTGRES_DATABASE
-              value: {{ default "weblate" .Values.postgresql.postgresDatabase | quote }}
+              value: {{ default "weblate" .Values.postgresql.postgresqlDatabase | quote }}
             - name: POSTGRES_HOST
               value: {{ template "weblate.postgresql.host" . }}
             - name: POSTGRES_PORT
