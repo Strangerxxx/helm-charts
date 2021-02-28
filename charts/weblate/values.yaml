@@ -6,6 +6,7 @@
 debug: true
 loglevel: "DEBUG"
 site_title: "Weblate"
+site_domain: ""
 admin_name: "Weblate Admin"
 admin_email: "weblate@example.com"
 #admin_password:

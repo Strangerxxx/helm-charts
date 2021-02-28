@@ -44,7 +44,11 @@ spec:
               value: {{ . }}
           {{- end }}
           {{- with .Values.site_title }}
-            - name: WEBLATE_SITE_TITLE
+            - name: WEBLATE_SITE_DOMAIN
+              value: {{ . }}
+          {{- end }}
+          {{- with .Values.site_domain }}
+            - name: WEBLATE_SITE_DOMAIN
               value: {{ . }}
           {{- end }}
           {{- with .Values.admin_name }}
