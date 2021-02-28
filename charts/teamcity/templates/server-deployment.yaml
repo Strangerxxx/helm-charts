@@ -20,9 +20,9 @@ spec:
         release: {{ .Release.Name }}
     spec:
       volumes:
-        - name: server-data
+        - name: data
           persistentVolumeClaim:
-            claimName: {{ default (include "teamcity.fullname" .) }}-server-data
+            claimName: {{ default (include "teamcity.fullname" .) }}-data
         - name: artifacts
           persistentVolumeClaim:
             claimName: {{ default (include "teamcity.fullname" .) }}-artifacts
@@ -44,7 +44,7 @@ spec:
               mountPath: /opt/teamcity/logs
             - name: temp
               mountPath: /opt/teamcity/temp
-            - name:  server-data
+            - name:  data
               mountPath: /data/teamcity_server/datadir
             - name: artifacts
               mountPath: /data/teamcity_server/datadir/system/artifacts

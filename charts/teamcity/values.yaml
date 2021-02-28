@@ -31,8 +31,10 @@ agent:
 #    runAsUser: 1000
 
 replicaCount: 1
-storageClass: "yc-storage-hdd"
-storageSize: 30Gi
+dataStorage:
+  storageClass: "nfs-client"
+  storageSize: 50Gi
+  accessMode: ReadWriteMany
 artifactStorage:
   storageClass: "nfs-client"
   storageSize: 50Gi

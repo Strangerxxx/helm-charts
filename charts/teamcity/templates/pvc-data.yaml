@@ -1,0 +1,15 @@
+{{- $fullName := default (include "teamcity.fullname" .) -}}
+{{- with .Values.dataStorage }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ $fullName }}-data
+  annotations:
+    volume.beta.kubernetes.io/storage-class: {{ .storageClass }}
+spec:
+  accessModes:
+    - {{ .accessMode }}
+  resources:
+    requests:
+      storage: {{ .storageSize }}
+{{- end }}
