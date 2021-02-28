@@ -3,7 +3,7 @@ entries:
   alertmanager-bot:
   - apiVersion: v2
     appVersion: 0.4.2
-    created: "2021-02-28T05:14:04.160486+03:00"
+    created: "2021-02-28T22:55:31.522861+03:00"
     description: A Helm chart for Kubernetes
     digest: 2c5d22f40f81ebd8f2dcf8ff3a140286e6226ec947956f6f56a026abdf0364c4
     name: alertmanager-bot
@@ -13,7 +13,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.4.2
-    created: "2021-02-28T05:14:04.159784+03:00"
+    created: "2021-02-28T22:55:31.522134+03:00"
     description: A Helm chart for Kubernetes
     digest: a71895df1fbdc64dda1f90d14ca416e21bd8355a3ce4e2333291d077151ff39c
     name: alertmanager-bot
@@ -23,7 +23,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.4.2
-    created: "2021-02-28T05:14:04.15885+03:00"
+    created: "2021-02-28T22:55:31.521365+03:00"
     description: A Helm chart for Kubernetes
     digest: f9ff2958b1b2ee709ccc9f31b2e5f5467c0cb4a74e04ba94976f0d42afb44195
     name: alertmanager-bot
@@ -34,7 +34,7 @@ entries:
   elasticsearch-operator:
   - apiVersion: v1
     appVersion: master
-    created: "2021-02-28T05:14:04.160966+03:00"
+    created: "2021-02-28T22:55:31.523324+03:00"
     description: A Helm chart for Elasticsearch operator
     digest: d41f7278bbb48fcc0010810cb4ef2f334a2460042f277ff9ff77c5e2008320d4
     maintainers:
@@ -52,7 +52,7 @@ entries:
   harbor:
   - apiVersion: v1
     appVersion: 1.6.0
-    created: "2021-02-28T05:14:04.171104+03:00"
+    created: "2021-02-28T22:55:31.53317+03:00"
     dependencies:
     - name: redis
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -80,7 +80,7 @@ entries:
     version: 0.3.2
   - apiVersion: v1
     appVersion: 1.6.0
-    created: "2021-02-28T05:14:04.16721+03:00"
+    created: "2021-02-28T22:55:31.529581+03:00"
     dependencies:
     - name: redis
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -108,7 +108,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: 1.6.0
-    created: "2021-02-28T05:14:04.163941+03:00"
+    created: "2021-02-28T22:55:31.526388+03:00"
     dependencies:
     - name: redis
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -137,7 +137,7 @@ entries:
   kadira:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.17831+03:00"
+    created: "2021-02-28T22:55:31.539119+03:00"
     dependencies:
     - name: mongodb-replicaset
       repository: file://../mongodb-replicaset
@@ -150,7 +150,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.176954+03:00"
+    created: "2021-02-28T22:55:31.537879+03:00"
     dependencies:
     - name: mongodb-replicaset
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -163,7 +163,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.17556+03:00"
+    created: "2021-02-28T22:55:31.536538+03:00"
     dependencies:
     - name: mongodb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -176,7 +176,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.174518+03:00"
+    created: "2021-02-28T22:55:31.53559+03:00"
     dependencies:
     - name: mongodb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -189,7 +189,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.17219+03:00"
+    created: "2021-02-28T22:55:31.534456+03:00"
     dependencies:
     - name: mongodb
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -203,7 +203,7 @@ entries:
   mgob:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.183099+03:00"
+    created: "2021-02-28T22:55:31.543502+03:00"
     description: A Helm chart for Kubernetes
     digest: cf8fbb0b299c09d1d91337e91e2326ed683f38aafe68b55be4085b4c865b76fc
     name: mgob
@@ -212,7 +212,7 @@ entries:
     version: 1.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.182623+03:00"
+    created: "2021-02-28T22:55:31.542956+03:00"
     description: A Helm chart for Kubernetes
     digest: 63cb62c1b5e1abcc7bf1241ecbaa2d44f9e1ee120705b22b8e6d220aa86b871f
     name: mgob
@@ -221,7 +221,7 @@ entries:
     version: 1.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.181903+03:00"
+    created: "2021-02-28T22:55:31.542458+03:00"
     description: A Helm chart for Kubernetes
     digest: 51b179e96a026854ead5e349edda75fdfab5d544d46a3e8e06c6428413ac3590
     name: mgob
@@ -230,7 +230,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.180867+03:00"
+    created: "2021-02-28T22:55:31.541997+03:00"
     description: A Helm chart for Kubernetes
     digest: 8d1b68dc14fbd6d1426bb0e07aba8a2eb83988c0141bc2f8d537d19e7fd6496f
     name: mgob
@@ -239,7 +239,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.18037+03:00"
+    created: "2021-02-28T22:55:31.540965+03:00"
     description: A Helm chart for Kubernetes
     digest: ba516305a1a17b80e975ee6c98dc3e5aade3589e82c6e952b0bc7ed71dacb36b
     name: mgob
@@ -248,7 +248,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.179856+03:00"
+    created: "2021-02-28T22:55:31.540516+03:00"
     description: A Helm chart for Kubernetes
     digest: 25ff0fc5d844f19ceab1d6359d3965a56d6205b03d007f466ff5c2115e74f01d
     name: mgob
@@ -257,7 +257,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.179334+03:00"
+    created: "2021-02-28T22:55:31.540062+03:00"
     description: A Helm chart for Kubernetes
     digest: 83bd23380b98d5d8cccc8e828ae15e861c66c7509b71a0f8648893b975aba589
     name: mgob
@@ -265,7 +265,7 @@ entries:
     - mgob-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v1
-    created: "2021-02-28T05:14:04.178791+03:00"
+    created: "2021-02-28T22:55:31.539567+03:00"
     description: MongoDB dockerized backup agent. Runs schedule backups with retention,
       S3 & SFTP upload, notifications, instrumentation with Prometheus and more.
     digest: 6193925ca7455f1d637ab5d351f192faa191a968dfb1f8eeeaa29168eb649d19
@@ -276,7 +276,7 @@ entries:
   teamcity:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.191824+03:00"
+    created: "2021-02-28T22:55:31.554788+03:00"
     description: A Helm chart for Kubernetes
     digest: dd6e9010ba2e17798932abe488e6b1691e67d51fbf12ca6a19cae8bf28578450
     name: teamcity
@@ -285,7 +285,7 @@ entries:
     version: 0.9.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.191317+03:00"
+    created: "2021-02-28T22:55:31.554289+03:00"
     description: A Helm chart for Kubernetes
     digest: 1a12cd88740f546329b9088b251db738f9bb65862c324b26fdd2c6dc6328716a
     name: teamcity
@@ -294,7 +294,7 @@ entries:
     version: 0.8.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.190821+03:00"
+    created: "2021-02-28T22:55:31.553767+03:00"
     description: A Helm chart for Kubernetes
     digest: 3589e0799bee106221abc3b09b824d0cb0b310164c5ed4bb1d22e20019e7cf8e
     name: teamcity
@@ -303,7 +303,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.190336+03:00"
+    created: "2021-02-28T22:55:31.553267+03:00"
     description: A Helm chart for Kubernetes
     digest: effda11d3f015373f0d9dc944ab06d12106e2e9ea6e5478895a08b19f206cd71
     name: teamcity
@@ -312,7 +312,7 @@ entries:
     version: 0.6.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.189206+03:00"
+    created: "2021-02-28T22:55:31.552673+03:00"
     description: A Helm chart for Kubernetes
     digest: 8feee661ef7364df9dbe458140c231b0a51b015cb5e781f5871c0c5cec4176e0
     name: teamcity
@@ -321,7 +321,7 @@ entries:
     version: 0.6.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.188769+03:00"
+    created: "2021-02-28T22:55:31.551277+03:00"
     description: A Helm chart for Kubernetes
     digest: 50c0536ecf0ec9d6250799af79f65d5668876799614ae7c6f1b2701d763ab55d
     name: teamcity
@@ -330,7 +330,7 @@ entries:
     version: 0.6.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.188331+03:00"
+    created: "2021-02-28T22:55:31.550658+03:00"
     description: A Helm chart for Kubernetes
     digest: 1646b1ab3a2b90b5c7c2b7ff7f4c98380a8542da974fbc2ca76cd821b02b0df9
     name: teamcity
@@ -339,7 +339,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.187861+03:00"
+    created: "2021-02-28T22:55:31.550108+03:00"
     description: A Helm chart for Kubernetes
     digest: fc62867ea17c22f32333134beb939377c05dd432dd0bb7241d8c3b7cd0b3e0f2
     name: teamcity
@@ -348,7 +348,7 @@ entries:
     version: 0.5.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.187439+03:00"
+    created: "2021-02-28T22:55:31.549661+03:00"
     description: A Helm chart for Kubernetes
     digest: 606e9c35ee295d24bb19f5b82cbe724fd8826f2996d6b3ea69cbcf52c9aa163a
     name: teamcity
@@ -357,7 +357,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.187001+03:00"
+    created: "2021-02-28T22:55:31.549214+03:00"
     description: A Helm chart for Kubernetes
     digest: a945ed43774bc01c53b0c27a1dd51238093d72c1f2a534d9e50714a674a4cef2
     name: teamcity
@@ -366,7 +366,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.186579+03:00"
+    created: "2021-02-28T22:55:31.548785+03:00"
     description: A Helm chart for Kubernetes
     digest: d01aa6b591749ee5a573f2e1fcb3b5602765ff92792463140052abc90192f91a
     name: teamcity
@@ -375,7 +375,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.186149+03:00"
+    created: "2021-02-28T22:55:31.548333+03:00"
     description: A Helm chart for Kubernetes
     digest: 3c4dde21253a7bb498dda65063d5953ae6a735264c8ed7809b1889abb725f5c3
     name: teamcity
@@ -384,7 +384,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.185719+03:00"
+    created: "2021-02-28T22:55:31.547819+03:00"
     description: A Helm chart for Kubernetes
     digest: 8320874ca75c602a87063f8d397946ef97db01f4eac99ffe4c2fe9067bdf2405
     name: teamcity
@@ -393,7 +393,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.185266+03:00"
+    created: "2021-02-28T22:55:31.547349+03:00"
     description: A Helm chart for Kubernetes
     digest: f62c87c7bb9453cd44b01e286f6d65436c6ea5f50971ddcd5b0d2d8e6889110e
     name: teamcity
@@ -402,7 +402,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.184837+03:00"
+    created: "2021-02-28T22:55:31.546755+03:00"
     description: A Helm chart for Kubernetes
     digest: c4e16727b16c9e1c57c6bf56e88c48a9d203e19f00df4f7f4ac3f7feee3b53cf
     name: teamcity
@@ -411,7 +411,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.184418+03:00"
+    created: "2021-02-28T22:55:31.545772+03:00"
     description: A Helm chart for Kubernetes
     digest: dba696c241dfa923f25cdfabc43c96fc67c54170570d35ad1359f17fea135b4d
     name: teamcity
@@ -420,7 +420,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.183973+03:00"
+    created: "2021-02-28T22:55:31.544768+03:00"
     description: A Helm chart for Kubernetes
     digest: a42a100d24db001ab77c9b1aa853fd89f2da3e3638c55c0a9a70bfa90f83e01e
     name: teamcity
@@ -429,7 +429,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 0.0.1
-    created: "2021-02-28T05:14:04.183536+03:00"
+    created: "2021-02-28T22:55:31.543972+03:00"
     description: A Helm chart for Kubernetes
     digest: 1eb32a585f1321ca5fa10e2935238c670776f6c279d82d97043e4eb394f9c4c2
     name: teamcity
@@ -439,7 +439,24 @@ entries:
   weblate:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.217115+03:00"
+    created: "2021-02-28T22:55:31.591798+03:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.7
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.8.0
+    description: A Helm chart for Kubernetes
+    digest: 24ab313032c9c3859a98417da9ded8169322d17ebd88085577be3b65a2f12bfc
+    name: weblate
+    urls:
+    - weblate-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-02-28T22:55:31.582635+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -456,7 +473,7 @@ entries:
     version: 0.1.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.213996+03:00"
+    created: "2021-02-28T22:55:31.57928+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -473,7 +490,7 @@ entries:
     version: 0.1.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.211719+03:00"
+    created: "2021-02-28T22:55:31.575898+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -490,7 +507,7 @@ entries:
     version: 0.1.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.20946+03:00"
+    created: "2021-02-28T22:55:31.573112+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -507,7 +524,7 @@ entries:
     version: 0.1.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.206155+03:00"
+    created: "2021-02-28T22:55:31.57014+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -524,7 +541,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.203586+03:00"
+    created: "2021-02-28T22:55:31.566677+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -541,7 +558,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.200858+03:00"
+    created: "2021-02-28T22:55:31.563887+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -558,7 +575,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.197449+03:00"
+    created: "2021-02-28T22:55:31.561097+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -575,7 +592,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-28T05:14:04.194607+03:00"
+    created: "2021-02-28T22:55:31.557643+03:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -593,7 +610,7 @@ entries:
   youtrack:
   - apiVersion: v2
     appVersion: 2020.1.5557
-    created: "2021-02-28T05:14:04.218179+03:00"
+    created: "2021-02-28T22:55:31.593148+03:00"
     description: A Helm chart for Kubernetes
     digest: c8376a3e34272dc27f5f1fe9ad337625019dc86c505f8330ead74ff09e8eba2f
     name: youtrack
@@ -603,7 +620,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 2020.1.5557
-    created: "2021-02-28T05:14:04.217824+03:00"
+    created: "2021-02-28T22:55:31.592704+03:00"
     description: A Helm chart for Kubernetes
     digest: 494b4f7afc90278f2d6fb9f55a361800c0af272f42bae5e2fa799c1c3d0c37db
     name: youtrack
@@ -613,7 +630,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 2020.1.5557
-    created: "2021-02-28T05:14:04.217473+03:00"
+    created: "2021-02-28T22:55:31.592262+03:00"
     description: A Helm chart for Kubernetes
     digest: 9fb6575eb96ea44a0af09912bb278b9a6a36c4787c323012ee942b1884ec888e
     name: youtrack
@@ -621,4 +638,4 @@ entries:
     urls:
     - youtrack-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-28T05:14:04.156161+03:00"
+generated: "2021-02-28T22:55:31.519897+03:00"
