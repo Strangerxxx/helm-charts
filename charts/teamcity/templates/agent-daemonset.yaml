@@ -3,20 +3,15 @@ kind: DaemonSet
 metadata:
   name: {{ template "teamcity.fullname" . }}-agent
   labels:
-    app: {{ template "teamcity.name" . }}-agent
-    chart: {{ template "teamcity.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "teamcity-agent.labels" . | nindent 4 }}
 spec:
   selector:
     matchLabels:
-      app: {{ template "teamcity.name" . }}-agent
-      release: {{ .Release.Name }}
+      {{- include "teamcity-agent.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: {{ template "teamcity.name" . }}-agent
-        release: {{ .Release.Name }}
+        {{- include "teamcity-agent.selectorLabels" . | nindent 8 }}
     spec:
       volumes:
         - name: agent-conf
