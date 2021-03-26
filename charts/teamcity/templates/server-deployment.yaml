@@ -26,6 +26,7 @@ spec:
             claimName: {{ default (include "teamcity.fullname" .) }}-logs
         - name: temp
           emptyDir: {}
+      serviceAccountName: {{ include "teamcity.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
