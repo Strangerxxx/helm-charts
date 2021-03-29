@@ -30,3 +30,54 @@ Create chart name and version as used by the chart label.
 {{- define "teamcity.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "teamcity.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "teamcity.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}
+
+{{/*
+Common agent labels
+*/}}
+{{- define "teamcity-agent.labels" -}}
+helm.sh/chart: {{ include "teamcity.chart" . }}
+{{ include "teamcity-agent.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
+Selector agent labels
+*/}}
+{{- define "teamcity-agent.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "teamcity.name" . }}-agent
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Common labels
+*/}}
+{{- define "teamcity.labels" -}}
+helm.sh/chart: {{ include "teamcity.chart" . }}
+{{ include "teamcity.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
+Selector labels
+*/}}
+{{- define "teamcity.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "teamcity.name" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}

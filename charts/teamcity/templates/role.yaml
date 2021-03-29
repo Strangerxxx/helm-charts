@@ -1,0 +1,13 @@
+{{- if .Values.rbac.create -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ template "teamcity.fullname" . }}
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "teamcity.labels" . | nindent 4 }}
+rules:
+  {{- if .Values.rbac.role.rules }}
+  {{- toYaml .Values.rbac.role.rules | nindent 2 }}
+  {{- end -}}
+{{- end -}}

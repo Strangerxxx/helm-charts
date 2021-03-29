@@ -3,21 +3,16 @@ kind: Deployment
 metadata:
   name: {{ template "teamcity.fullname" . }}
   labels:
-    app: {{ template "teamcity.name" . }}
-    chart: {{ template "teamcity.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "teamcity.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "teamcity.name" . }}
-      release: {{ .Release.Name }}
+      {{- include "teamcity.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: {{ template "teamcity.name" . }}
-        release: {{ .Release.Name }}
+        {{- include "teamcity.selectorLabels" . | nindent 8 }}
     spec:
       volumes:
         - name: data
@@ -31,6 +26,7 @@ spec:
             claimName: {{ default (include "teamcity.fullname" .) }}-logs
         - name: temp
           emptyDir: {}
+      serviceAccountName: {{ include "teamcity.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

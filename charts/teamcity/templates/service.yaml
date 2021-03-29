@@ -3,10 +3,7 @@ kind: Service
 metadata:
   name: {{ template "teamcity.fullname" . }}
   labels:
-    app: {{ template "teamcity.name" . }}
-    chart: {{ template "teamcity.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    {{- include "teamcity.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
