@@ -12,5 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "teamcity.name" . }}
-    release: {{ .Release.Name }}
+    {{- include "teamcity.selectorLabels" . | nindent 4 }}
