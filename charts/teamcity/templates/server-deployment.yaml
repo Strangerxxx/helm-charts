@@ -29,6 +29,31 @@ spec:
       serviceAccountName: {{ include "teamcity.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- if .Values.volumePermissions.enabled }}
+      initContainers:
+        - name: init-chown-data
+          image: "{{ .Values.volumePermissions.image.image }}:{{ .Values.volumePermissions.image.imageTag }}"
+          imagePullPolicy: "{{ .Values.volumePermissions.image.pullPolicy }}"
+          resources:
+            limits:
+              cpu: 50m
+              memory: 32Mi
+            requests:
+              cpu: 50m
+              memory: 32Mi
+          command:
+            - sh
+            - -c
+            - |
+              chown -Rv {{ .Values.agent.securityContext.runAsUser }}:{{ .Values.agent.securityContext.runAsGroup }} /data
+          volumeMounts:
+            - name: data
+              mountPath: /data
+            - name: artifacts
+              mountPath: /data/system/artifacts
+          securityContext:
+            runAsUser: {{ .Values.volumePermissions.securityContext.runAsUser }}
+      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
