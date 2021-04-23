@@ -86,14 +86,8 @@ securityContext: {}
 #  runAsNonRoot: true
 #  runAsUser: 1000
 
-volumePermissions: {}
-#  enabled: true
-#  image:
-#    image: busybox
-#    imageTag: latest
-#    pullPolicy: IfNotPresent
-#  securityContext:
-#    runAsUser: 0
+# server and agent securityContext must be set if set this param to true
+fixVolumePermissions: false
 
 service:
   type: ClusterIP
