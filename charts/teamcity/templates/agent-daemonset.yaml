@@ -53,7 +53,7 @@ spec:
         command:
           - sh
           - -c
-          - "chown -Rv {{ .Values.agent.securityContext.runAsUser }}:{{ .Values.agent.securityContext.runAsGroup }} /data"
+          - "chown -Rvh {{ .Values.agent.securityContext.runAsUser }}:{{ .Values.agent.securityContext.runAsGroup }} /data"
         volumeMounts:
           - name: agent-conf
             mountPath: /data/conf

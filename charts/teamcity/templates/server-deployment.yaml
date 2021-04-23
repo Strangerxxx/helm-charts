@@ -44,7 +44,7 @@ spec:
           command:
             - sh
             - -c
-            - "chown -Rv {{ .Values.securityContext.runAsUser }}:{{ .Values.securityContext.runAsGroup }} /data"
+            - "chown -Rvh {{ .Values.securityContext.runAsUser }}:{{ .Values.securityContext.runAsGroup }} /data"
           volumeMounts:
             - name: data
               mountPath: /data
