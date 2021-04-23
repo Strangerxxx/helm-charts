@@ -86,6 +86,9 @@ securityContext: {}
 #  runAsNonRoot: true
 #  runAsUser: 1000
 
+# server and agent securityContext must be set if set this param to true
+fixVolumePermissions: false
+
 service:
   type: ClusterIP
   port: 8111
