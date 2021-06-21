@@ -59,7 +59,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          workingDir: /home/tcuser
+          workingDir: /home/teamcity
           volumeMounts:
             - name: logs
               mountPath: /opt/teamcity/logs
