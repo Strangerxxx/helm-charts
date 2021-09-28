@@ -273,7 +273,37 @@ entries:
     urls:
     - mgob-0.11.0.tgz
     version: 0.11.0
+  mongodb-replicaset:
+  - apiVersion: v1
+    appVersion: "3.4"
+    created: "2021-09-28T15:26:58.514733439Z"
+    description: NoSQL document-oriented database that stores JSON-like documents
+      with dynamic schemas, simplifying the integration of data in content-driven
+      applications.
+    digest: 38019b6ebccfaee5fa41b11930a8d017185176c5239ef477aa29c432437bfdf3
+    home: https://github.com/mongodb/mongo
+    icon: https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg
+    maintainers:
+    - email: ramanathana@google.com
+      name: foxish
+    - email: unguiculus@gmail.com
+      name: unguiculus
+    name: mongodb-replicaset
+    sources:
+    - https://github.com/mongodb/mongo
+    urls:
+    - https://github.com/Strangerxxx/helm-charts/releases/download/mongodb-replicaset-2.2.2/mongodb-replicaset-2.2.2.tgz
+    version: 2.2.2
   teamcity:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-09-28T15:26:58.620065048Z"
+    description: A Helm chart for Kubernetes
+    digest: ec29f810ceafb832a06e8ffb1479b61adadc31f4ed630bc244c70c5842fedd41
+    name: teamcity
+    urls:
+    - https://github.com/Strangerxxx/helm-charts/releases/download/teamcity-0.11.2/teamcity-0.11.2.tgz
+    version: 0.11.2
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-06-21T20:49:36.848547+03:00"
@@ -734,4 +764,4 @@ entries:
     urls:
     - youtrack-0.1.0.tgz
     version: 0.1.0
-generated: "2021-06-21T20:49:36.823667+03:00"
+generated: "2021-09-28T15:26:58.730751756Z"
