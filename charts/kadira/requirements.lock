@@ -2,5 +2,5 @@ dependencies:
 - name: mongodb-replicaset
   repository: file://../mongodb-replicaset
   version: 2.2.2
-digest: sha256:fc16e2068e96da9940410c27f67746953098f6c854f1071053ad54dc904f863f
-generated: 2019-03-28T20:25:47.341573+03:00
+digest: sha256:bc6c0d285197de6858a176a5c113ce78b75e93a2a2754ceff7bdb94bb3c1caec
+generated: "2021-09-28T18:10:18.87194+03:00"
