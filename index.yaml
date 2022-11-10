@@ -736,6 +736,16 @@ entries:
   youtrack:
   - apiVersion: v2
     appVersion: 2022.2.60480
+    created: "2022-11-10T15:17:26.457247886Z"
+    description: A Helm chart for Kubernetes
+    digest: cae0e836f686a7c1517641fcef7da50b2dee963c8e70a2ed74433b36b0fb4818
+    name: youtrack
+    type: application
+    urls:
+    - https://github.com/Strangerxxx/helm-charts/releases/download/youtrack-0.3.1/youtrack-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: 2022.2.60480
     created: "2022-11-10T14:49:42.575323777Z"
     description: A Helm chart for Kubernetes
     digest: 4210c67074929834e4f8413c61ad34e4380f8ae73d357f7298bc666d6f377f55
@@ -774,4 +784,4 @@ entries:
     urls:
     - youtrack-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-10T14:49:42.575850582Z"
+generated: "2022-11-10T15:17:26.457420386Z"
