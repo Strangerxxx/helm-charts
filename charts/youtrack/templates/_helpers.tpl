@@ -50,3 +50,16 @@ Selector labels
 app.kubernetes.io/name: {{ include "youtrack.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
+
+{{/*
+Is any ingress enabled
+*/}}
+{{- define "youtrack.isAnyIgressEnabled" -}}
+{{- $isEnabled := false }}
+{{- range .Values.ingresses }}
+{{- if .enabled }}
+{{- $isEnabled = true }}
+{{- end }}
+{{- end }}
+{{- if $isEnabled }}true{{ else }}false{{ end }}
+{{- end }}

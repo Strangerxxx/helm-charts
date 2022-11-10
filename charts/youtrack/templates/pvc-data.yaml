@@ -3,9 +3,11 @@ apiVersion: v1
 metadata:
   name: {{ include "youtrack.fullname" . }}-data
   annotations:
-    volume.beta.kubernetes.io/storage-class: {{ .Values.persistence.data.storageClass }}
+    volume.beta.kubernetes.io/storage-class: {{ .Values.persistence.data.storageClass | quote }}
 spec:
-  accessModes: {{ .Values.persistence.data.accessModes }}
+{{- with .Values.persistence.data.accessModes }}
+  accessModes: {{ toYaml . }}
+{{- end }}
   resources:
     requests:
-      storage: {{ .Values.persistence.data.storageSize }}
+      storage: {{ .Values.persistence.data.storageSize | quote }}
