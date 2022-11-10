@@ -6,7 +6,8 @@ metadata:
     volume.beta.kubernetes.io/storage-class: {{ .Values.persistence.logs.storageClass | quote }}
 spec:
 {{- with .Values.persistence.logs.accessModes }}
-  accessModes: {{ toYaml . }}
+  accessModes:
+    {{- toYaml . | nindent 4 }}
 {{- end }}
   resources:
     requests:

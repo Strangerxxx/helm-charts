@@ -9,7 +9,7 @@ apiVersion: extensions/v1beta1
 {{- end }}
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ if empty .name }}{{ $fullName }}{{ else }}{{ printf "%s-%s" $fullName .name }}{{ end }}
   labels:
     {{- include "youtrack.labels" $ | nindent 4 }}
   {{- with .annotations }}
@@ -40,4 +40,5 @@ spec:
           {{- end }}
     {{- end }}
   {{- end }}
+---
 {{- end }}
